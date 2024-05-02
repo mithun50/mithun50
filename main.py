@@ -1,9 +1,7 @@
 # Update this import statement to import Chat from the telegram package
-from telegram import bot
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Chat, ChatAction
 #import loggin
 from telegram.error import NetworkError
-from telegram import Bot
 from telegram import ParseMode
 # Your existing import statements
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, InlineQueryHandler, ConversationHandler, CallbackContext, CallbackQueryHandler
