@@ -2,7 +2,6 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Chat
 #import loggin
 from telegram.error import NetworkError
-from telegram import ParseMode
 # Your existing import statements
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, InlineQueryHandler, ConversationHandler, CallbackContext, CallbackQueryHandler
 from telegram.error import NetworkError
