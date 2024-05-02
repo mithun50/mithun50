@@ -24,9 +24,9 @@ TOKEN = "7190804820:AAGQ1Hj-U6OIVKo1D7iP8p_IPM8e2FzstUA"
 #path Defined is termux path
 FILENAME = 0
 bot = Bot(token=TOKEN)
-DB_FILE_PATH = 'DB/db.txt'
-link_file = 'link/link.txt'
-image_dir = 'images/'
+DB_FILE_PATH = 'db.txt'
+link_file = 'link.txt'
+image_dir = ''
 current_page = 0
 # Define a function to handle error
 
