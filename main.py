@@ -15,7 +15,7 @@ from keep_alive import keep_alive
 #logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 keep_alive()
 # Define your Telegram bot token
-TOKEN = "7190804820:AAGQ1Hj-U6OIVKo1D7iP8p_IPM8e2FzstUA"
+TOKEN = "7190804820:AAHVktPU9LpTf8JHygr1HK7kEJzL-npC7k8"
 
 # Define the directory where the files are stored
 #path Defined is termux path
@@ -216,7 +216,7 @@ def unknown(update, context):
 def tourniment(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text="We Will Update soon....")
 # Create the Updater and pass your bot's token
-updater = Updater(bot=bot)
+updater = Updater(token=TOKEN, use_context=True)
 
 # Get the dispatcher to register handlers
 dispatcher = updater.dispatcher
