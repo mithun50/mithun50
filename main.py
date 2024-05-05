@@ -1,5 +1,5 @@
 # Update this import statement to import Chat from the telegram package
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Chat
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Chat, Bot
 #import loggin
 from telegram.error import NetworkError
 # Your existing import statements
