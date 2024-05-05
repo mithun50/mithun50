@@ -1,4 +1,4 @@
-python-telegram-bot
+python-telegram-bot==21.1.1
 flask
 requests
 telegram
