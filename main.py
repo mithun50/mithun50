@@ -11,6 +11,7 @@ import time
 #import logging
 import math
 import re
+from queue import Queue
 from keep_alive import keep_alive
 #logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 keep_alive()
@@ -21,6 +22,7 @@ TOKEN = "7190804820:AAHVktPU9LpTf8JHygr1HK7kEJzL-npC7k8"
 #path Defined is termux path
 FILENAME = 0
 bot = Bot(token=TOKEN)
+update_queue = Queue()
 DB_FILE_PATH = 'db.txt'
 link_file = 'link.txt'
 image_dir = ''
@@ -216,7 +218,7 @@ def unknown(update, context):
 def tourniment(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text="We Will Update soon....")
 # Create the Updater and pass your bot's token
-updater = Updater(token=TOKEN, use_context=True)
+updater = Updater(bot=bot, update_queue=update_queue)
 
 # Get the dispatcher to register handlers
 dispatcher = updater.dispatcher
