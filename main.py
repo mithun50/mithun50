@@ -216,7 +216,7 @@ def unknown(update, context):
 def tourniment(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text="We Will Update soon....")
 # Create the Updater and pass your bot's token
-updater = Updater(bot=bot, use_context=True)
+updater = Updater(bot=bot)
 
 # Get the dispatcher to register handlers
 dispatcher = updater.dispatcher
