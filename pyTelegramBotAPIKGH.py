@@ -13,8 +13,8 @@ bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
 L = instaloader.Instaloader()
 
 # Define file paths
-link_file = 'link/link.txt'
-image_dir = 'images/'
+link_file = 'link.txt'
+image_dir = ''
 current_page = 0
 # Define a function to handle error
 
@@ -32,7 +32,7 @@ def get_greeting():
 def start(message):
     # Define the keyboard layout
     chat_id = message.chat.id
-    photo_path = "/data/data/com.termux/files/home/KGMy033/KGM.jpg"
+    photo_path = "KGM.jpg"
     user_name = message.from_user.username
     greeting_message = get_greeting()
     keyboard = telebot.types.InlineKeyboardMarkup()
