@@ -1,4 +1,5 @@
-python-telegram-bot==21.1.1
+pyTelegramBotAPI
+Instaloader
 flask
 requests
 telegram
