@@ -7,7 +7,7 @@ import math
 from keep_alive import keep_alive
 keep_alive()
 # Initialize Telegram Bot
-bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
+bot = telebot.TeleBot('5939744767:AAG0SRf8vs5WY8H6sma0Lt7k1FVjXXyA9zo')
 
 # Initialize Instaloader
 L = instaloader.Instaloader()
