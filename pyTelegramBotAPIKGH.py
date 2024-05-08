@@ -188,14 +188,12 @@ def button(message):
     bot.send_message(chat_id=message.chat.id, text="/start to start the bot. /mods to get the Mods from the bot.")
 
 # Define a function to handle unknown commands
-@bot.message_handler(func=lambda message: True)
-def unknown(message):
-    bot.send_message(chat_id=message.chat.id, text="Sorry, I didn't understand that command.")
-
-# Define a function to handle the /apptourni command
 @bot.message_handler(commands=['apptourni'])
 def tourniment(message):
     bot.send_message(chat_id=message.chat.id, text="We will update you soon....") 
+@bot.message_handler(func=lambda message: True)
+def unknown(message):
+    bot.send_message(chat_id=message.chat.id, text="Sorry, I didn't understand that command.")
 
 # Start the bot
 bot.polling()
