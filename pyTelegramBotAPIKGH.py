@@ -17,7 +17,7 @@ link_file = 'link.txt'
 image_dir = ''
 current_page = 0
 # Define a function to handle error
-
+DB_FILE_PATH = 'db.txt'
 
 # Define a function to handle the /start command
 def get_greeting():
