@@ -5,6 +5,7 @@ import datetime
 import re
 import math
 from keep_alive import keep_alive
+import pytz
 keep_alive()
 # Initialize Telegram Bot
 bot = telebot.TeleBot('7190804820:AAHVktPU9LpTf8JHygr1HK7kEJzL-npC7k8')
@@ -21,10 +22,16 @@ DB_FILE_PATH = 'db.txt'
 
 # Define a function to handle the /start command
 def get_greeting():
-    current_time = datetime.datetime.now().time()
-    if current_time < datetime.time(12):
+    # Get the current UTC time
+    utc_now = datetime.datetime.utcnow()
+
+    # Convert UTC time to Indian Standard Time
+    ist = pytz.timezone('Asia/Kolkata')
+    ist_now = utc_now.astimezone(ist).time()
+
+    if ist_now < datetime.time(12):
         return "🙏ನಮಸ್ಕಾರ ಬೆಳಗಿನ ವಂದನೆಗಳು! Good Morning!"
-    elif current_time < datetime.time(18):
+    elif ist_now < datetime.time(18):
         return "🙏ನಮಸ್ಕಾರ ಮಧ್ಯಾನದ ವಂದನೆಗಳು! Good Afternoon!"
     else:
         return "🙏ನಮಸ್ಕಾರ ಸಂಜೆಯ ವಂದನೆಗಳು! Good Evening!"
