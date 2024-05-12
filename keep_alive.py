@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Function to read the contents of db.txt
 def read_db_content():
-    with open('db.txt', 'r') as file:
+    with open('DB/db.txt', 'r') as file:
         return file.read()
 
 # Route to display the contents of db.txt
