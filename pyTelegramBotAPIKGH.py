@@ -195,5 +195,10 @@ def tourniment(message):
 def unknown(message):
     bot.send_message(chat_id=message.chat.id, text="Sorry, I didn't understand that command.")
 
-# Start the bot
-bot.polling()
+while True:
+    try:
+        bot.polling()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        # Wait for a short period before retrying
+        time.sleep(5)  # Wait for 5 seconds before retrying
