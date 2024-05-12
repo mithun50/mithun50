@@ -58,8 +58,11 @@ def start(message):
     first_name = user.first_name
     last_name = user.last_name
     username = user.username
-    current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    ist = pytz.timezone('Asia/Kolkata')
+    ist_now = datetime.datetime.now(tz=ist)
 
+# Format the timestamp in IST
+    current_time = ist_now.strftime('%Y-%m-%d %H:%M:%S')
     details_str = f"/Start : Date/Time: {current_time}\nUser ID: {user_id}\nFirst Name: {first_name}\nLast Name: {last_name}\nUsername: {username}\nChat_id:{chat_id}\n"
 
     # Append user details to the db.txt file
@@ -140,7 +143,11 @@ def get_user_details(message):
     first_name = user.first_name
     last_name = user.last_name
     username = user.username
-    current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    ist = pytz.timezone('Asia/Kolkata')
+    ist_now = datetime.datetime.now(tz=ist)
+
+# Format the timestamp in IST
+    current_time = ist_now.strftime('%Y-%m-%d %H:%M:%S')
     chat_id = message.chat.id
 
     details_str = f"/ID : Date/Time: {current_time}\nUser ID: {user_id}\nFirst Name: {first_name}\nLast Name: {last_name}\nUsername: {username}\nChat_id:{chat_id}\n"
