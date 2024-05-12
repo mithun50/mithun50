@@ -14,11 +14,11 @@ bot = telebot.TeleBot('7190804820:AAHVktPU9LpTf8JHygr1HK7kEJzL-npC7k8')
 L = instaloader.Instaloader()
 
 # Define file paths
-link_file = 'link.txt'
-image_dir = ''
+link_file = 'link/link.txt'
+image_dir = 'images'
 current_page = 0
 # Define a function to handle error
-DB_FILE_PATH = 'db.txt'
+DB_FILE_PATH = 'DB/db.txt'
 
 # Define a function to handle the /start command
 def get_greeting():
