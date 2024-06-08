@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DB Content</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <h>KannadaGamersHub. Manvanth. MithunGowda.B.<h>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .login-box {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <img src="logo.png" alt="logo" width="50" height="50">
-    <p>MithunGowda.B. Manvanth. KannadaGamrsHub. <p>
-    <h1>DB Content</h1>
-    <pre>{{ db_content }}</pre>
+    <div class="container">
+        <div class="login-box mt-5">
+            <img src="/static/logo.png" alt="Your Logo" class="mx-auto d-block mb-4" style="width: 100px;">
+            <h2 class="text-center mb-4">Login</h2>
+            {% if error %}
+                <div class="alert alert-danger text-center" role="alert">Invalid credentials. Please try again.</div>
+            {% endif %}
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
+    </div>
 </body>
-  </html>
+    </html
