@@ -1,23 +1,22 @@
 import telebot
-import instaloader
 import os
 import datetime
 import re
 import math
 from keep_alive import keep_alive
 import pytz
+
 keep_alive()
+
 # Initialize Telegram Bot
-bot = telebot.TeleBot('7190804820:AAHVktPU9LpTf8JHygr1HK7kEJzL-npC7k8')
+bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
 
 # Initialize Instaloader
-L = instaloader.Instaloader()
 
 # Define file paths
 link_file = 'link/link.txt'
 image_dir = 'images'
 current_page = 0
-# Define a function to handle error
 DB_FILE_PATH = 'DB/db.txt'
 
 # Define a function to handle the /start command
@@ -35,6 +34,7 @@ def get_greeting():
         return "🙏ನಮಸ್ಕಾರ ಮಧ್ಯಾನದ ವಂದನೆಗಳು! Good Afternoon!"
     else:
         return "🙏ನಮಸ್ಕಾರ ಸಂಜೆಯ ವಂದನೆಗಳು! Good Evening!"
+
 @bot.message_handler(commands=['start'])
 def start(message):
     # Define the keyboard layout
@@ -61,7 +61,6 @@ def start(message):
     ist = pytz.timezone('Asia/Kolkata')
     ist_now = datetime.datetime.now(tz=ist)
 
-# Format the timestamp in IST
     current_time = ist_now.strftime('%Y-%m-%d %H:%M:%S')
     details_str = f"/Start : Date/Time: {current_time}\nUser ID: {user_id}\nFirst Name: {first_name}\nLast Name: {last_name}\nUsername: {username}\nChat_id:{chat_id}\n"
 
@@ -80,8 +79,30 @@ def read_mod_data():
                 mod_data.append({'name': mod_name, 'link': mod_link, 'image': mod_image})
     return mod_data
 
+# Function to send initial mods list
+def send_initial_mods_list(chat_id):
+    send_mods_list(chat_id)
+
+# Define a function to handle the /mods command
 @bot.message_handler(commands=['mods'])
 def mods(message):
+    send_initial_mods_list(message.chat.id)
+
+# Define a function to handle button clicks for pagination
+@bot.callback_query_handler(func=lambda call: call.data in ['prev', 'next'])
+def pagination_button_click(call):
+    global current_page
+
+    # Update current page based on button clicked
+    if call.data == 'prev':
+        current_page -= 1
+    elif call.data == 'next':
+        current_page += 1
+
+    # Re-send the mods list with the updated page
+    send_mods_list(call.message.chat.id)
+
+def send_mods_list(chat_id):
     # Get the mod data
     mod_data = read_mod_data()
 
@@ -103,22 +124,8 @@ def mods(message):
     if current_page < total_pages - 1:
         keyboard.row(telebot.types.InlineKeyboardButton(f"Next ({current_page + 2} →)", callback_data="next"))
 
-    # Send message with inline keyboard markup
-    bot.send_message(chat_id=message.chat.id, text='Choose a mod:', reply_markup=keyboard)
-
-# Define a function to handle button clicks for pagination
-@bot.callback_query_handler(func=lambda call: call.data in ['prev', 'next'])
-def pagination_button_click(call):
-    global current_page
-
-    # Update current page based on button clicked
-    if call.data == 'prev':
-        current_page -= 1
-    elif call.data == 'next':
-        current_page += 1
-
-    # Re-send the mods list with the updated page
-    mods(call.message)
+    # Edit the message with the new inline keyboard markup
+    bot.edit_message_reply_markup(chat_id=chat_id, message_id=call.message.message_id, reply_markup=keyboard)
 
 # Define a function to handle button clicks for mod selection
 @bot.callback_query_handler(func=lambda call: call.data not in ['prev', 'next'])
@@ -136,6 +143,8 @@ def button_click(call):
             bot.send_message(call.message.chat.id, "Download Link sent successfully. 💛❤️")
 
             break
+
+# Define a function to handle the /id command
 @bot.message_handler(commands=['id'])
 def get_user_details(message):
     user = message.from_user
@@ -146,7 +155,6 @@ def get_user_details(message):
     ist = pytz.timezone('Asia/Kolkata')
     ist_now = datetime.datetime.now(tz=ist)
 
-# Format the timestamp in IST
     current_time = ist_now.strftime('%Y-%m-%d %H:%M:%S')
     chat_id = message.chat.id
 
@@ -195,12 +203,14 @@ def button(message):
     bot.send_message(chat_id=message.chat.id, text="/start to start the bot. /mods to get the Mods from the bot.")
 
 # Define a function to handle unknown commands
-@bot.message_handler(commands=['apptourni'])
-def tourniment(message):
-    bot.send_message(chat_id=message.chat.id, text="We will update you soon....") 
 @bot.message_handler(func=lambda message: True)
 def unknown(message):
     bot.send_message(chat_id=message.chat.id, text="Sorry, I didn't understand that command.")
+
+# Define a function to handle the /apptourni command
+@bot.message_handler(commands=['apptourni'])
+def tourniment(message):
+    bot.send_message(chat_id=message.chat.id, text="We will update you soon....")
 
 while True:
     try:
