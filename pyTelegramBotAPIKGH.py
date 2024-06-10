@@ -9,7 +9,7 @@ import pytz
 keep_alive()
 
 # Initialize Telegram Bot
-bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
+bot = telebot.TeleBot('7190804820:AAHVktPU9LpTf8JHygr1HK7kEJzL-npC7k8')
 
 # Initialize Instaloader
 
