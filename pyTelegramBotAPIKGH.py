@@ -208,4 +208,4 @@ while True:
     except Exception as e:
         print(f"An error occurred: {e}")
         # Wait for a short period before retrying
-        time.sleep(5)  # Wait for 5 seconds before retrying
+        # Wait for 5 seconds before retrying
