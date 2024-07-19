@@ -8,7 +8,9 @@ from keep_alive import keep_alive
 import pytz
 keep_alive()
 # Initialize Telegram Bot
-bot = telebot.TeleBot('7190804820:AAHVktPU9LpTf8JHygr1HK7kEJzL-npC7k8')
+API_TOKEN = os.getenv('TGBToken')
+
+bot = telebot.TeleBot(API_TOKEN)
 
 # Initialize Instaloader
 L = instaloader.Instaloader()
