@@ -39,6 +39,6 @@
 
 <br clear="both">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Snake_game_icon.svg" alt="Snake Game">
+<img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake Game">
 
 ###
