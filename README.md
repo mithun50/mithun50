@@ -1,22 +1,56 @@
-<h1 align="center">Hi 👋, I'm Mithun Gowda B</h1>
-<h3 align="center">A passionate Cyber Security from India</h3>
+<!-- Profile README for mithun50 -->
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=mithun50&label=Profile%20views&color=0e75b6&style=flat" alt="mithun50" /> </p>
-
-- 👨‍💻 All of my projects are available at [http://GitHub.com/mithun50](http://GitHub.com/mithun50)
-
-- 📫 How to reach me **mithungowda.b7411@gmail.com**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://instagram.com/mithun.gowda.b" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="mithun.gowda.b" height="30" width="40" /></a>
+<h1 align="center">Hi there 👋, I'm Mithun Gowda B</h1>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=mithun50&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views"/>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
+---
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=mithun50&show_icons=true&locale=en&layout=compact" alt="mithun50" /></p>
+🎓 **Engineering 1st Year Student**  
+🌱 Passionate about learning and building cool stuff with code!
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&locale=en" alt="mithun50" /></p>
+---
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=mithun50&" alt="mithun50" /></p>
+**🔧 Skills & Tools**
+
+![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+![Flask](https://img.shields.io/badge/Flask-000?style=for-the-badge&logo=flask&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21F?style=for-the-badge&logo=huggingface&logoColor=black)
+
+---
+
+**🌟 Favorite Project**
+
+- [Kannadafy](https://github.com/mithun50/Kannadafy) – Making Kannada content more accessible!
+---
+
+**📈 GitHub Stats & Activity**
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&theme=tokyonight" alt="mithun50's GitHub stats" />
+  <br>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mithun50&theme=tokyonight" alt="mithun50's GitHub streak" />
+</p>
+
+---
+
+**🏆 GitHub Trophies**
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=mithun50&theme=tokyonight" alt="mithun50's GitHub Trophies"/>
+</p>
+
+---
+
+**📫 Connect with me**
+
+- Instagram: [mithun.gowda.b](https://instagram.com/mithun.gowda.b)
+
+---
+
+*Thanks for stopping by! 🚀*
