@@ -43,6 +43,7 @@
   <img src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&theme=tokyonight" alt="mithun50's GitHub stats" />
   <br>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=mithun50&theme=tokyonight" alt="mithun50's GitHub streak" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mithun50&langs_count=8&layout=compact&&theme=tokyonight" alt="mithun50's used languages" />
 </p>
 
 ---
