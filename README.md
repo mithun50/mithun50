@@ -21,6 +21,14 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21F?style=for-the-badge&logo=huggingface&logoColor=black)
+![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![FlutterFlow](https://img.shields.io/badge/FlutterFlow-0061F2?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTguNDIzIDEzLjE0M2w2LjU3NSA2LjU3NSA2LjU3NS02LjU3NUwxOC41OTUgMTRsLTYuMTc1IDYuMTc1LTYuMTc1LTYuMTc1eiIvPjxwYXRoIGQ9Ik04LjQyMyA1Ljg1N2w2LjU3NSA2LjU3NSA2LjU3NS02LjU3NUwxOC41OTUgMTBsLTYuMTc1IDYuMTc1LTYuMTc1LTYuMTc1eiIvPjwvc3ZnPg==&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-393?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+
 
 ---
 
