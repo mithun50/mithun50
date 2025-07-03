@@ -33,34 +33,28 @@
 ---
 ## 🚀 Notable Contributions
 
-### 🧠 SuperClaude
+**🧠 SuperClaude**
 Contributed to the development of **SuperClaude**, a cutting-edge AI initiative focused on advanced reasoning and transformer-based enhancements.  
-🔗 [Check out the SuperClaude project](https://github.com/NomenAK/SuperClaude)  
+🖇️ [Check out the SuperClaude project](https://github.com/NomenAK/SuperClaude)  
 🛠 Areas: Prompt Engineering, Model Tuning, Evaluation Suite
 
-### 📚 Engineering Kannada
-Actively contributing to the **Engineering in Kannada** project — a community-driven effort to make engineering concepts accessible in [Kannada](w).  
+ **📚 Engineering Kannada**
+Actively contributing to the **Engineering in Kannada** project — a community-driven effort to make engineering concepts accessible in [Kannada](https://www.google.com/search?q=Kannada).  
 🌐 [Explore Engineering in Kannada](https://github.com/chandansgowda/engineering-in-kannada)  
 
----
-
-### 🏆 Badges of Contribution
+ **🏆 Badges of Contribution**
 
 [![SuperClaude Contributor](https://img.shields.io/badge/SuperClaude-Contributor-blueviolet?style=for-the-badge&logo=github)](https://github.com/NomenAK/SuperClaude)
 [![Engineering Kannada](https://img.shields.io/badge/Engineering-in%20Kannada-blue?style=for-the-badge&logo=readthedocs)](https://github.com/chandansgowda/engineering-in-kannada)
 
 ---
 
-### ✨ Why It Matters
-Helping bridge the gap between AI and regional languages while empowering the next wave of open-source innovation
----
-
-**🌟 Favorite Project**
+### 🌟 Favorite Project
 
 - [Kannadafy](https://github.com/mithun50/Kannadafy) – Making Kannada content more accessible!
 ---
 
-**📈 GitHub Stats & Activity**
+### 📈 GitHub Stats & Activity
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&theme=tokyonight" alt="mithun50's GitHub stats" />
@@ -81,7 +75,8 @@ Helping bridge the gap between AI and regional languages while empowering the ne
 
 **📫 Connect with me**
 
-- Instagram: [mithun.gowda.b](https://instagram.com/mithun.gowda.b)
+[![Instagram](https://img.shields.io/badge/Instagram-@mithun.gowda.b-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/mithun.gowda.b)
+[![Gmail](https://img.shields.io/badge/Gmail-mithungowda.b7411@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithungowda.b7411@gmail.com)
 
 ---
 
