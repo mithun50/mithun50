@@ -33,19 +33,21 @@
 ---
 ## 🚀 Notable Contributions
 
-**🧠 SuperClaude**
+## 🧠 SuperClaude
 Contributed to the development of **SuperClaude**, a cutting-edge AI initiative focused on advanced reasoning and transformer-based enhancements.  
 🖇️ [Check out the SuperClaude project](https://github.com/NomenAK/SuperClaude)  
 🛠 Areas: Prompt Engineering, Model Tuning, Evaluation Suite
 
- **📚 Engineering Kannada**
+ ## 📚 Engineering Kannada
 Actively contributing to the **Engineering in Kannada** project — a community-driven effort to make engineering concepts accessible in [Kannada](https://www.google.com/search?q=Kannada).  
 🌐 [Explore Engineering in Kannada](https://github.com/chandansgowda/engineering-in-kannada)  
 
- **🏆 Badges of Contribution**
+[![engineeringinkannada.in](https://img.shields.io/badge/Visit-engineeringinkannada.in-blue?style=for-the-badge&logo=google-chrome)](https://engineeringinkannada.in)
+
+ ## 🏆 Badges of Contribution
 
 [![SuperClaude Contributor](https://img.shields.io/badge/SuperClaude-Contributor-blueviolet?style=for-the-badge&logo=github)](https://github.com/NomenAK/SuperClaude)
-[![Engineering Kannada](https://img.shields.io/badge/Engineering-in%20Kannada-blue?style=for-the-badge&logo=readthedocs)](https://github.com/chandansgowda/engineering-in-kannada)
+[![Engineering Kannada](https://img.shields.io/badge/_Engineering-in%20Kannada-blue?style=for-the-badge&logo=react)](https://github.com/chandansgowda/engineering-in-kannada)
 
 ---
 
@@ -73,7 +75,7 @@ Actively contributing to the **Engineering in Kannada** project — a community-
 
 ---
 
-**📫 Connect with me**
+## 📫 Connect with me
 
 [![Instagram](https://img.shields.io/badge/Instagram-@mithun.gowda.b-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/mithun.gowda.b)
 [![Gmail](https://img.shields.io/badge/Gmail-mithungowda.b7411@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithungowda.b7411@gmail.com)
