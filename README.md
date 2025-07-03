@@ -31,6 +31,29 @@
 
 
 ---
+## 🚀 Notable Contributions
+
+### 🧠 SuperClaude
+Contributed to the development of **SuperClaude**, a cutting-edge AI initiative focused on advanced reasoning and transformer-based enhancements.  
+🔗 [Check out the SuperClaude project](https://github.com/NomenAK/SuperClaude)  
+🛠 Areas: Prompt Engineering, Model Tuning, Evaluation Suite
+
+### 📚 Engineering Kannada
+Actively contributing to the **Engineering in Kannada** project — a community-driven effort to make engineering concepts accessible in [Kannada](w).  
+🌐 [Explore Engineering in Kannada](https://github.com/chandansgowda/engineering-in-kannada)  
+
+---
+
+### 🏆 Badges of Contribution
+
+[![SuperClaude Contributor](https://img.shields.io/badge/SuperClaude-Contributor-blueviolet?style=for-the-badge&logo=github)](https://github.com/NomenAK/SuperClaude)
+[![Engineering Kannada](https://img.shields.io/badge/Engineering-in%20Kannada-blue?style=for-the-badge&logo=readthedocs)](https://github.com/chandansgowda/engineering-in-kannada)
+
+---
+
+### ✨ Why It Matters
+Helping bridge the gap between AI and regional languages while empowering the next wave of open-source innovation
+---
 
 **🌟 Favorite Project**
 
