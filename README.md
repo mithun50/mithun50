@@ -28,6 +28,9 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-393?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-OS-772953?style=for-the-badge&logo=linux&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+![Termux](https://img.shields.io/badge/Termux-Linux_Terminal-black?style=for-the-badge&logo=termux&logoColor=white)
 
 
 ---
