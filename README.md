@@ -37,9 +37,12 @@
 ## 🚀 Notable Contributions
 
 ## 🧠 SuperClaude
-Contributed to the development of **SuperClaude**, a cutting-edge AI initiative focused on advanced reasoning and transformer-based enhancements.  
+Contributed and Collaborated to the development of **SuperClaude**, a cutting-edge AI initiative focused on advanced reasoning and transformer-based enhancements.  
 🖇️ [Check out the SuperClaude project](https://github.com/NomenAK/SuperClaude)  
+
+
 🛠 Areas: Prompt Engineering, Model Tuning, Evaluation Suite
+[![superclaude-org.github.io](https://img.shields.io/badge/-superclaudeorg.github.io-blue?style=for-the-badge&logo=google-chrome)](https://superclaude-org.github.io/)
 
  ## 📚 Engineering Kannada
 Actively contributing to the **Engineering in Kannada** project — a community-driven effort to make engineering concepts accessible in [Kannada](https://www.google.com/search?q=Kannada).  
@@ -49,14 +52,15 @@ Actively contributing to the **Engineering in Kannada** project — a community-
 
  ## 🏆 Badges of Contribution
 
-[![SuperClaude Contributor](https://img.shields.io/badge/SuperClaude-Contributor-blueviolet?style=for-the-badge&logo=github)](https://github.com/NomenAK/SuperClaude)
-[![Engineering Kannada](https://img.shields.io/badge/_Engineering-in%20Kannada-blue?style=for-the-badge&logo=react)](https://github.com/chandansgowda/engineering-in-kannada)
+[![SuperClaude Contributor](https://img.shields.io/badge/SuperClaude-Contributor-blueviolet?style=for-the-badge&logo=github)](https://github.com/NomenAK/SuperClaude/contributors)
+[![Engineering Kannada](https://img.shields.io/badge/_Engineering-in%20Kannada-blue?style=for-the-badge&logo=react)](https://github.com/chandansgowda/engineering-in-kannada/contributors)
 
 ---
 
 ### 🌟 Favorite Project
 
-- [Kannadafy](https://github.com/mithun50/Kannadafy) – Making Kannada content more accessible!
+- [Kannadafy](https://github.com/mithun50/Kannadafy)
+- [SuperClaude](https://github.com/NomenAK/SuperClaude)
 ---
 
 ### 📈 GitHub Stats & Activity
