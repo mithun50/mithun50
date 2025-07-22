@@ -35,7 +35,7 @@
 
 ---
 ## 🚀 Notable Contributions
-![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&limit=5&theme=dark&combine_all_yearly_contributions=true)
+![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&limit=10&theme=dark&combine_all_yearly_contributions=true)
 
 
 ## 🧠 SuperClaude
