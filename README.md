@@ -35,6 +35,8 @@
 
 ---
 ## 🚀 Notable Contributions
+![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&limit=5&theme=dark&combine_all_yearly_contributions=true)
+
 
 ## 🧠 SuperClaude
 Contributed and Collaborated to the development of **SuperClaude**, a cutting-edge AI initiative focused on advanced reasoning and transformer-based enhancements.  
