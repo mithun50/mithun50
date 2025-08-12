@@ -52,11 +52,6 @@ Actively contributing to the **Engineering in Kannada** project — a community-
 
 [![engineeringinkannada.in](https://img.shields.io/badge/Visit-engineeringinkannada.in-blue?style=for-the-badge&logo=google-chrome)](https://engineeringinkannada.in)
 
- ## 🏆 Badges of Contribution
-
-[![SuperClaude Contributor](https://img.shields.io/badge/SuperClaude-Contributor-blueviolet?style=for-the-badge&logo=github)](https://github.com/NomenAK/SuperClaude/contributors)
-[![Engineering Kannada](https://img.shields.io/badge/_Engineering-in%20Kannada-blue?style=for-the-badge&logo=react)](https://github.com/chandansgowda/engineering-in-kannada/contributors)
-
 ---
 
 ### 🌟 Favorite Project
