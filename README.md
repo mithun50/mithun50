@@ -1,71 +1,88 @@
 <!-- Profile README for mithun50 -->
+<h1 align="center">Hey there 👋, I'm <span style="color:#4CAF50;">Mithun Gowda B</span></h1>
 
-<h1 align="center">Hi there 👋, I'm Mithun Gowda B</h1>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=4CAF50&center=true&vCenter=true&width=500&lines=Engineering+1st+Year+Student;Python+%7C+AI+%7C+Automation;Open+Source+Contributor;Always+Learning+New+Things" alt="Typing Animation" />
+</p>
+
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=mithun50&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views"/>
 </p>
 
 ---
 
-🎓 **Engineering 1st Year Student**  
-🌱 Passionate about learning and building cool stuff with code!
+### 🎓 About Me  
+💡 **Engineering 1st Year Student** passionate about **building cool stuff with code**  
+🌱 Learning **AI, Automation, and Full-stack development**  
+🚀 Love contributing to **open-source projects**  
 
 ---
 
-**🔧 Skills & Tools**
-
-![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-![Flask](https://img.shields.io/badge/Flask-000?style=for-the-badge&logo=flask&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21F?style=for-the-badge&logo=huggingface&logoColor=black)
-![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-393?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-OS-772953?style=for-the-badge&logo=linux&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
-
----
-## 🚀 Notable Contributions
-
-![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50\&limit=10\&theme=dark\&combine_all_yearly_contributions=true)
-
-* **SuperClaude** — Contributed to a modular platform for advanced reasoning and enhancements. [🔗 Project](https://github.com/SuperClaude-Org/SuperClaude_Framework) | [🌐 Website](https://superclaude-org.github.io/)
-* **Engineering Kannada** — Helping make engineering concepts accessible in Kannada. [🔗 Project](https://github.com/chandansgowda/engineering-in-kannada) | [🌐 Website](https://engineeringinkannada.in)
-* **Google SecOps Wrapper** — Contributions to security automation tools for Google Cloud. [🔗 Project](https://github.com/google/secops-wrapper)
-* **AOSSIE — Devr.AI** — AI-powered tools for developer productivity. [🔗 Project](https://github.com/AOSSIE-Org/Devr.AI)
-
----
-
-### 📈 GitHub Stats & Activity
-
+### 🔧 Skills & Tools  
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&theme=tokyonight" alt="mithun50's GitHub stats" />
-  <br>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mithun50&theme=tokyonight" alt="mithun50's GitHub streak" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mithun50&langs_count=8&layout=compact&&theme=tokyonight" alt="mithun50's used languages" />
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
+  <img src="https://img.shields.io/badge/Flask-000?style=for-the-badge&logo=flask&logoColor=white"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-393?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Linux-OS-772953?style=for-the-badge&logo=linux&logoColor=white"/>
 </p>
 
 ---
 
-**🏆 GitHub Trophies**
+## 🚀 Notable Contributions  
+![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&limit=10&theme=dark&combine_all_yearly_contributions=true)
 
+- **SuperClaude** — Contributed to a modular platform for advanced reasoning and enhancements. [🔗 Project](https://github.com/SuperClaude-Org/SuperClaude_Framework) | [🌐 Website](https://superclaude-org.github.io/)  
+- **Engineering Kannada** — Helping make engineering concepts accessible in Kannada. [🔗 Project](https://github.com/chandansgowda/engineering-in-kannada) | [🌐 Website](https://engineeringinkannada.in)  
+- **Google SecOps Wrapper** — Contributions to security automation tools for Google Cloud. [🔗 Project](https://github.com/google/secops-wrapper)  
+- **AOSSIE — Devr.AI** — AI-powered tools for developer productivity. [🔗 Project](https://github.com/AOSSIE-Org/Devr.AI)  
+
+---
+
+### 📊 GitHub Stats  
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=mithun50&theme=tokyonight" alt="mithun50's GitHub Trophies"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&theme=tokyonight" height="180"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mithun50&theme=tokyonight" height="180"/>
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mithun50&langs_count=8&layout=compact&theme=tokyonight" height="150"/>
 </p>
 
 ---
 
-## 📫 Connect with me
-
-[![Instagram](https://img.shields.io/badge/Instagram-@mithun.gowda.b-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/mithun.gowda.b)
-[![Gmail](https://img.shields.io/badge/Gmail-mithungowda.b7411@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mithungowda.b7411@gmail.com)
+### 📈 Activity Graph  
+[![Mithun's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mithun50&bg_color=0d1117&color=4CAF50&line=4CAF50&point=FFFFFF&area=true&hide_border=true)](https://github.com/mithun50)
 
 ---
 
-*Thanks for stopping by! 🚀*
+### 🏆 GitHub Trophies  
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=mithun50&theme=tokyonight&margin-w=10&margin-h=10"/>
+</p>
+
+---
+
+### 📫 Connect with Me  
+<p align="center">
+  <a href="https://instagram.com/mithun.gowda.b" target="_blank">
+    <img src="https://skillicons.dev/icons?i=instagram" width="40" height="40" alt="Instagram"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="mailto:mithungowda.b7411@gmail.com">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="40" height="40" alt="Gmail"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/mithun50" target="_blank">
+    <img src="https://skillicons.dev/icons?i=github" width="40" height="40" alt="GitHub"/>
+  </a>
+</p>
+
+
+---
+
+<p align="center">⭐ Thanks for visiting! Keep coding and keep creating 🚀</p>
