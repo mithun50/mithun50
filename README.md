@@ -24,40 +24,22 @@
 ![Google Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![FlutterFlow](https://img.shields.io/badge/FlutterFlow-0061F2?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTguNDIzIDEzLjE0M2w2LjU3NSA2LjU3NSA2LjU3NS02LjU3NUwxOC41OTUgMTRsLTYuMTc1IDYuMTc1LTYuMTc1LTYuMTc1eiIvPjxwYXRoIGQ9Ik04LjQyMyA1Ljg1N2w2LjU3NSA2LjU3NSA2LjU3NS02LjU3NUwxOC41OTUgMTBsLTYuMTc1IDYuMTc1LTYuMTc1LTYuMTc1eiIvPjwvc3ZnPg==&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-393?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-OS-772953?style=for-the-badge&logo=linux&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
-![Termux](https://img.shields.io/badge/Termux-Linux_Terminal-black?style=for-the-badge&logo=termux&logoColor=white)
-
 
 ---
 ## 🚀 Notable Contributions
-![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&limit=10&theme=dark&combine_all_yearly_contributions=true)
 
+![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50\&limit=10\&theme=dark\&combine_all_yearly_contributions=true)
 
-## 🧠 SuperClaude
-Contributed and Collaborated to the development of **SuperClaude**, a cutting-edge AI initiative focused on advanced reasoning and transformer-based enhancements.  
-🖇️ [Check out the SuperClaude project](https://github.com/NomenAK/SuperClaude)  
+* **SuperClaude** — Contributed to a modular platform for advanced reasoning and enhancements. [🔗 Project](https://github.com/SuperClaude-Org/SuperClaude_Framework) | [🌐 Website](https://superclaude-org.github.io/)
+* **Engineering Kannada** — Helping make engineering concepts accessible in Kannada. [🔗 Project](https://github.com/chandansgowda/engineering-in-kannada) | [🌐 Website](https://engineeringinkannada.in)
+* **Google SecOps Wrapper** — Contributions to security automation tools for Google Cloud. [🔗 Project](https://github.com/google/secops-wrapper)
+* **AOSSIE — Devr.AI** — AI-powered tools for developer productivity. [🔗 Project](https://github.com/AOSSIE-Org/Devr.AI)
 
-
-🛠 Areas: Prompt Engineering, Model Tuning, Evaluation Suite
-[![superclaude-org.github.io](https://img.shields.io/badge/-superclaudeorg.github.io-blue?style=for-the-badge&logo=google-chrome)](https://superclaude-org.github.io/)
-
- ## 📚 Engineering Kannada
-Actively contributing to the **Engineering in Kannada** project — a community-driven effort to make engineering concepts accessible in [Kannada](https://www.google.com/search?q=Kannada).  
-🌐 [Explore Engineering in Kannada](https://github.com/chandansgowda/engineering-in-kannada)  
-
-[![engineeringinkannada.in](https://img.shields.io/badge/Visit-engineeringinkannada.in-blue?style=for-the-badge&logo=google-chrome)](https://engineeringinkannada.in)
-
----
-
-### 🌟 Favorite Project
-
-- [Kannadafy](https://github.com/mithun50/Kannadafy)
-- [SuperClaude](https://github.com/NomenAK/SuperClaude)
 ---
 
 ### 📈 GitHub Stats & Activity
