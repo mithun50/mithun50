@@ -37,7 +37,7 @@
 ## 🚀 Notable Contributions  
 ![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&limit=10&theme=dark&combine_all_yearly_contributions=true)
 
-- **SuperClaude** — Contributed to a modular platform for advanced reasoning and enhancements. [🔗 Project](https://github.com/SuperClaude-Org/SuperClaude_Framework) | [🌐 Website](https://superclaude-org.github.io/)  
+- **SuperClaude** — Contributed to a modular platform for advanced reasoning and enhancements. [🔗 Project](https://github.com/SuperClaude-Org/SuperClaude_Framework) | [🌐 Website](https://superclaude.netlify.app)  
 - **Engineering Kannada** — Helping make engineering concepts accessible in Kannada. [🔗 Project](https://github.com/chandansgowda/engineering-in-kannada) | [🌐 Website](https://engineeringinkannada.in)  
 - **Google SecOps Wrapper** — Contributions to security automation tools for Google Cloud. [🔗 Project](https://github.com/google/secops-wrapper)  
 - **AOSSIE — Devr.AI** — AI-powered tools for developer productivity. [🔗 Project](https://github.com/AOSSIE-Org/Devr.AI)  
