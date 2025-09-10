@@ -1,6 +1,0 @@
-pyTelegramBotAPI
-Instaloader
-flask
-requests
-telegram
-pytz
