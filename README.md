@@ -88,6 +88,10 @@
   <a href="https://linkedin.com/in/mithungowdab" target="_blank">
     <img src="https://skillicons.dev/icons?i=linkedin" width="40" height="40" alt="LinkedIn"/>
   </a>
+    &nbsp;&nbsp;
+  <a href="https://discord.gg/eamXcxtd" target="_blank">
+    <img src="https://skillicons.dev/icons?i=discord" width="40" height="40" alt="LinkedIn"/>
+  </a>
 </p>
 
 ---
