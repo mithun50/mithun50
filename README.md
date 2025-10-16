@@ -57,6 +57,7 @@
 
 ### 📈 Activity Graph  
 [![Mithun's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mithun50&bg_color=0d1117&color=4CAF50&line=4CAF50&point=FFFFFF&area=true&hide_border=true)](https://github.com/mithun50)
+[![Mithun's github activity graph_summery](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mithun50&theme=github_dark)](https://github.com/mithun50)
 
 ---
 
