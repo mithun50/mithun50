@@ -201,7 +201,7 @@ export async function getDynamicProjects() {
   // Map repos with proper star counts (use parent stars for validated contributions)
   const projectsWithStars = repos.map((repo) => {
     // For validated contributions, use parent's star count
-    const isContribution = repo.fork && repo.isValidContribution && repo.parent;
+    const isContribution = !!(repo.fork && repo.isValidContribution && repo.parent);
     const stars = isContribution ? repo.parent!.stargazers_count : repo.stargazers_count;
     const description = isContribution && !repo.description
       ? repo.parent!.description
@@ -213,7 +213,7 @@ export async function getDynamicProjects() {
       effectiveStars: stars,
       effectiveDescription: description,
       parentUrl,
-      isContribution, // Only true if user is actually a contributor
+      isContribution, // boolean: true if user is actually a contributor
     };
   });
 
