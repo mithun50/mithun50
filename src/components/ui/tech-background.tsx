@@ -35,26 +35,16 @@ export function FloatingCode() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {codeSnippets.map((code, i) => (
-        <motion.div
+        <div
           key={i}
           className="absolute font-mono text-[10px] text-white/[0.03] whitespace-nowrap"
           style={{
             left: `${(i * 13) % 100}%`,
             top: `${(i * 17) % 100}%`,
           }}
-          animate={{
-            opacity: [0.02, 0.05, 0.02],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 6 + i,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: i * 0.5,
-          }}
         >
           {code}
-        </motion.div>
+        </div>
       ))}
     </div>
   );
@@ -62,7 +52,7 @@ export function FloatingCode() {
 
 export function GlowingOrb() {
   return (
-    <motion.div
+    <div
       className="absolute w-[600px] h-[600px] rounded-full pointer-events-none"
       style={{
         background: "radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)",
@@ -70,21 +60,11 @@ export function GlowingOrb() {
         left: "50%",
         transform: "translate(-50%, -50%)",
       }}
-      animate={{
-        scale: [1, 1.1, 1],
-        opacity: [0.5, 0.8, 0.5],
-      }}
-      transition={{
-        duration: 8,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
     />
   );
 }
 
 export function NoiseTexture() {
-  // Lightweight grain effect using CSS only - no SVG filter
   return (
     <div
       className="absolute inset-0 pointer-events-none opacity-[0.02]"
