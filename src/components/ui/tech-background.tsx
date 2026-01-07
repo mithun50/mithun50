@@ -1,12 +1,9 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+// Lightweight background components - no heavy animations
 
 export function TechGrid() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Animated grid lines */}
+      {/* Static grid lines - GPU friendly */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -15,31 +12,6 @@ export function TechGrid() {
             linear-gradient(to bottom, white 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
-        }}
-      />
-
-      {/* Scanning line effect */}
-      <motion.div
-        className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"
-        initial={{ top: "-10%" }}
-        animate={{ top: "110%" }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
-
-      {/* Vertical scanning line */}
-      <motion.div
-        className="absolute top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-white/10 to-transparent"
-        initial={{ left: "-10%" }}
-        animate={{ left: "110%" }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "linear",
-          delay: 4,
         }}
       />
     </div>
@@ -112,11 +84,12 @@ export function GlowingOrb() {
 }
 
 export function NoiseTexture() {
+  // Lightweight grain effect using CSS only - no SVG filter
   return (
     <div
-      className="absolute inset-0 pointer-events-none opacity-[0.015] mix-blend-overlay"
+      className="absolute inset-0 pointer-events-none opacity-[0.02]"
       style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+        backgroundImage: `url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAY5JREFUaIHt2c0OgjAQBOD5/5/2oB48ePCkJ5944YCxQGnZnSmQ7CTEqPTrFCjwOQDwRJIAAJJ6VO4p6h5Tf1H3mPqLusfUX9Q9pv6i7jH1F3WPqb+oe0z9Rd1j6i/qHlN/UfeY+ou6x9Rf1D2m/qLuMfUXdY+pv6h7TP1F3WPqL+oeU39R95j6i7rH1F/UPab+ou4x9Rd1j6m/qHtM/UXdY+ov6h5Tf1H3mPqLusfUX9Q9pv6i7jH1F3WP4XmfKwC8EQkAgCTJ7inqHlN/UfeY+ou6x9Rf1D2m/qLuMfUXdY+pv6h7TP1F3WPqL+oeU39R95j6i7rH1F/UPab+ou4x9Rd1j6m/qHtM/UXdY+ov6h5Tf1H3mPqLusfUX9Q9pv6i7jH1F3WPqb+oe0z9Rd1j6i/qHlN/UfeY+ou6x9Rf1D2m/qLuMfUXdY+pv6h7TP1F3WPqL+oeU39R95j6i7rH1F/UPab+ou4x9Rd1j6m/qHsM/y7zAwDeAOBNEgAAknpU7inqHvPyF3e/vAG8AQAAAB5JRU5ErkJggg==")`,
       }}
     />
   );
