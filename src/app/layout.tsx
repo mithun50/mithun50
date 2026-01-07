@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Mithun Gowda B | Full-Stack Developer & AI Enthusiast",
     description:
       "Portfolio of Mithun Gowda B - Engineering student at DBIT, Co-Founder of NextGenXplorrers",
