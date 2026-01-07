@@ -36,7 +36,7 @@ export default function Hero() {
             <div className="absolute -inset-0.5 rounded-full border border-violet-500/30" />
 
             {/* Profile Image */}
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-2 border-white/10">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-white/10">
               <Image
                 src={profile.avatar}
                 alt={profile.name}
@@ -51,7 +51,7 @@ export default function Hero() {
           </div>
 
           {/* Badges Row - Education & Co-Founder */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6">
             {/* Education Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
               <GraduationCap className="w-4 h-4 text-violet-400" />
