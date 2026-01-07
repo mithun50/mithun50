@@ -13,14 +13,14 @@ import {
   Check,
   MessageCircle,
 } from "lucide-react";
-import { profile } from "@/data/profile";
+import { staticProfile } from "@/lib/data";
 import { GlassCard } from "@/components/ui/glass-card";
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, href: profile.socials.github, handle: "@mithun50" },
-  { name: "LinkedIn", icon: Linkedin, href: profile.socials.linkedin, handle: "@mithungowdab" },
-  { name: "Twitter", icon: Twitter, href: profile.socials.twitter, handle: "@MithunGowdaB" },
-  { name: "Discord", icon: MessageCircle, href: profile.socials.discord, handle: "Server" },
+  { name: "GitHub", icon: Github, href: staticProfile.socials.github, handle: "@mithun50" },
+  { name: "LinkedIn", icon: Linkedin, href: staticProfile.socials.linkedin, handle: "@mithungowdab" },
+  { name: "Twitter", icon: Twitter, href: staticProfile.socials.twitter, handle: "@MithunGowdaB" },
+  { name: "Discord", icon: MessageCircle, href: staticProfile.socials.discord, handle: "Server" },
 ];
 
 export default function Contact() {
@@ -29,7 +29,7 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
-    navigator.clipboard.writeText(profile.email);
+    navigator.clipboard.writeText(staticProfile.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -102,7 +102,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email me</h3>
-                <p className="text-white/50 font-mono">{profile.email}</p>
+                <p className="text-white/50 font-mono">{staticProfile.email}</p>
               </button>
             </GlassCard>
 
@@ -114,7 +114,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-white/30 uppercase tracking-widest mb-1">Location</p>
-                  <p className="text-white/70">{profile.location}</p>
+                  <p className="text-white/70">{staticProfile.location}</p>
                 </div>
               </div>
             </GlassCard>
@@ -176,9 +176,25 @@ export default function Contact() {
                 {/* Additional Links */}
                 <div className="mt-6 pt-6 border-t border-white/5">
                   <p className="text-xs text-white/30 mb-3">Other profiles</p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-2">
                     <a
-                      href={profile.socials.pypi}
+                      href={staticProfile.socials.huggingface}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white/50 hover:text-white hover:border-white/30 transition-all font-mono flex items-center gap-1.5"
+                    >
+                      <span>🤗</span> Hugging Face
+                    </a>
+                    <a
+                      href={staticProfile.socials.npmjs}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white/50 hover:text-white hover:border-white/30 transition-all font-mono"
+                    >
+                      npm
+                    </a>
+                    <a
+                      href={staticProfile.socials.pypi}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white/50 hover:text-white hover:border-white/30 transition-all font-mono"
@@ -186,7 +202,7 @@ export default function Contact() {
                       PyPI
                     </a>
                     <a
-                      href={profile.socials.orcid}
+                      href={staticProfile.socials.orcid}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white/50 hover:text-white hover:border-white/30 transition-all font-mono"

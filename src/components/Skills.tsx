@@ -3,18 +3,33 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, Layers, Wrench, Cloud } from "lucide-react";
-import { skills } from "@/data/profile";
 import { DynamicIcon } from "@/components/ui/dynamic-icon";
 import { GlassCard } from "@/components/ui/glass-card";
 
-const skillCategories = [
-  { title: "Languages", icon: Code2, items: skills.languages },
-  { title: "Frameworks", icon: Layers, items: skills.frameworks },
-  { title: "Tools", icon: Wrench, items: skills.tools },
-  { title: "Platforms", icon: Cloud, items: skills.platforms },
-];
+interface Skill {
+  name: string;
+  icon: string;
+  count?: number;
+}
 
-export default function Skills() {
+interface SkillsData {
+  languages: Skill[];
+  frameworks: Skill[];
+  tools: Skill[];
+  platforms: Skill[];
+}
+
+interface SkillsProps {
+  skills: SkillsData;
+}
+
+export default function Skills({ skills }: SkillsProps) {
+  const skillCategories = [
+    { title: "Languages", icon: Code2, items: skills.languages },
+    { title: "Frameworks", icon: Layers, items: skills.frameworks },
+    { title: "Tools", icon: Wrench, items: skills.tools },
+    { title: "Platforms", icon: Cloud, items: skills.platforms },
+  ];
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 

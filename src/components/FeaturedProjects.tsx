@@ -4,12 +4,24 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Star, GitFork, ExternalLink, ArrowRight, Github } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
-import { projects } from "@/data/profile";
 import { DynamicIcon } from "@/components/ui/dynamic-icon";
 
-const featuredProjects = projects.filter((p) => p.featured).slice(0, 6);
+interface Project {
+  name: string;
+  description: string;
+  language: string;
+  stars: number;
+  forks: number;
+  url: string;
+  homepage?: string;
+  topics: string[];
+  category: string;
+  featured: boolean;
+  isForked: boolean;
+  icon: string;
+}
 
-function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
@@ -137,7 +149,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
   );
 }
 
-export default function FeaturedProjects() {
+interface FeaturedProjectsProps {
+  projects: Project[];
+  totalCount: number;
+}
+
+export default function FeaturedProjects({ projects, totalCount }: FeaturedProjectsProps) {
   return (
     <section id="featured" className="py-32 relative overflow-hidden bg-[#121212]">
       {/* Subtle background */}
@@ -180,7 +197,7 @@ export default function FeaturedProjects() {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {featuredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard key={project.name} project={project} index={index} />
           ))}
         </div>
@@ -196,7 +213,7 @@ export default function FeaturedProjects() {
             href="/projects"
             className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-medium rounded-full hover:shadow-[0_0_40px_rgba(255,255,255,0.15)] transition-all group"
           >
-            <span>Explore all {projects.length} projects</span>
+            <span>Explore all {totalCount} projects</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>

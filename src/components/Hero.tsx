@@ -4,12 +4,25 @@ import { motion } from "framer-motion";
 import { ArrowDown, MapPin, Github, ExternalLink, Copy, Check, GraduationCap, Rocket, Youtube, PlayCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { profile } from "@/data/profile";
 import { TechGrid, NoiseTexture } from "@/components/ui/tech-background";
 import { TextRotator } from "@/components/ui/text-rotator";
 import { useState } from "react";
 
-export default function Hero() {
+interface ProfileData {
+  name: string;
+  avatar: string;
+  location: string;
+  email: string;
+  bio: string;
+  rotatingWords: string[];
+  education: { shortName: string };
+  venture: { role: string; shortName: string };
+  stats: { repos: number; stars: number; followers: number; contributions: string | number };
+  socials: { github: string };
+  nextgenx: { youtube: string; instagram: string; playstore: string };
+}
+
+export default function Hero({ profile }: { profile: ProfileData }) {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
@@ -95,9 +108,9 @@ export default function Hero() {
           </p>
 
           {/* Location */}
-          <div className="flex items-center gap-2 text-white/30 text-sm mb-12">
-            <MapPin className="w-3 h-3" />
-            <span className="font-mono">{profile.location}</span>
+          <div className="flex items-start gap-2 text-white/30 text-sm mb-12">
+            <MapPin className="w-3 h-3 mt-0.5 flex-shrink-0" />
+            <span className="font-mono text-center">{profile.location}</span>
           </div>
 
           {/* CTA Buttons */}

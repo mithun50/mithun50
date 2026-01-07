@@ -1,11 +1,35 @@
 "use client";
 
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Star, GitFork, ExternalLink, Github, Search, X, Sparkles } from "lucide-react";
-import { projects, categories, type Project } from "@/data/profile";
+import { Star, GitFork, ExternalLink, Github, Search, X, Sparkles, ArrowUpDown, Clock, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { DynamicIcon } from "@/components/ui/dynamic-icon";
+
+export interface Project {
+  name: string;
+  description: string;
+  language: string;
+  stars: number;
+  forks: number;
+  url: string;
+  homepage?: string;
+  topics: string[];
+  category: string;
+  featured: boolean;
+  isForked: boolean;
+  isContribution?: boolean; // True if user is in contributors list
+  icon: string;
+  updatedAt: string;
+}
+
+type SortOption = "stars" | "recent" | "name";
+type OwnershipFilter = "all" | "original" | "contributed";
+
+export interface Category {
+  name: string;
+  icon: string;
+}
 
 const languageColors: Record<string, string> = {
   Python: "#3572A5",
@@ -89,8 +113,8 @@ function Project3DCard({ project, index }: { project: Project; index: number }) 
                       Featured
                     </span>
                   )}
-                  {project.isForked && (
-                    <span className="text-[10px] text-white/30">Contributed</span>
+                  {project.isContribution && (
+                    <span className="text-[10px] text-purple-400/60">Contributor</span>
                   )}
                 </div>
               </div>
@@ -191,12 +215,21 @@ function Project3DCard({ project, index }: { project: Project; index: number }) 
   );
 }
 
-export default function Projects() {
+interface ProjectsProps {
+  projects: Project[];
+  categories: Category[];
+}
+
+export default function Projects({ projects, categories }: ProjectsProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
+  const [sortBy, setSortBy] = useState<SortOption>("stars");
+  const [ownershipFilter, setOwnershipFilter] = useState<OwnershipFilter>("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 10;
 
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = { All: projects.length };
@@ -204,10 +237,17 @@ export default function Projects() {
       counts[p.category] = (counts[p.category] || 0) + 1;
     });
     return counts;
-  }, []);
+  }, [projects]);
+
+  // Count for ownership filters (contributions = validated contributors only)
+  const ownershipCounts = useMemo(() => {
+    const original = projects.filter((p) => !p.isForked).length;
+    const contributed = projects.filter((p) => p.isContribution).length;
+    return { all: projects.length, original, contributed };
+  }, [projects]);
 
   const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
+    let filtered = projects.filter((project) => {
       const matchesCategory = activeCategory === "All" || project.category === activeCategory;
       const matchesSearch =
         searchQuery === "" ||
@@ -215,9 +255,41 @@ export default function Projects() {
         project.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
         project.topics.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
       const matchesFeatured = !showFeaturedOnly || project.featured;
-      return matchesCategory && matchesSearch && matchesFeatured;
+      const matchesOwnership =
+        ownershipFilter === "all" ||
+        (ownershipFilter === "original" && !project.isForked) ||
+        (ownershipFilter === "contributed" && project.isContribution);
+      return matchesCategory && matchesSearch && matchesFeatured && matchesOwnership;
     });
-  }, [activeCategory, searchQuery, showFeaturedOnly]);
+
+    // Sort projects
+    filtered = [...filtered].sort((a, b) => {
+      switch (sortBy) {
+        case "stars":
+          return b.stars - a.stars;
+        case "recent":
+          return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
+        case "name":
+          return a.name.localeCompare(b.name);
+        default:
+          return 0;
+      }
+    });
+
+    return filtered;
+  }, [projects, activeCategory, searchQuery, showFeaturedOnly, ownershipFilter, sortBy]);
+
+  // Pagination
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const paginatedProjects = useMemo(() => {
+    const startIndex = (currentPage - 1) * projectsPerPage;
+    return filteredProjects.slice(startIndex, startIndex + projectsPerPage);
+  }, [filteredProjects, currentPage]);
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCategory, searchQuery, showFeaturedOnly, ownershipFilter, sortBy]);
 
   return (
     <section id="projects" className="pt-24 pb-20 bg-[#121212] relative overflow-hidden" ref={ref}>
@@ -283,47 +355,125 @@ export default function Projects() {
             )}
           </div>
 
-          {/* Category Filters */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <motion.button
-                key={category.name}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => setActiveCategory(category.name)}
-                className={cn(
-                  "px-4 py-2 rounded-full text-xs font-mono transition-all duration-300 flex items-center gap-2",
-                  activeCategory === category.name
-                    ? "bg-white text-black"
-                    : "bg-white/[0.02] border border-white/10 text-white/50 hover:text-white hover:border-white/30"
-                )}
-              >
-                <DynamicIcon name={category.icon} className="w-3.5 h-3.5" />
-                <span>{category.name}</span>
-                <span className={cn(
-                  "px-1.5 py-0.5 rounded-full text-[10px]",
-                  activeCategory === category.name
-                    ? "bg-[#121212]/10"
-                    : "bg-white/5"
-                )}>
-                  {categoryCounts[category.name] || 0}
-                </span>
-              </motion.button>
-            ))}
+          {/* Filter Console */}
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent">
+            {/* Terminal Header */}
+            <div className="flex items-center gap-2 px-4 py-2 border-b border-white/10 bg-white/[0.02]">
+              <div className="flex gap-1.5">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+              </div>
+              <span className="text-[10px] text-white/30 font-mono ml-2">filter --projects</span>
+              <div className="flex-1" />
+              <span className="text-[10px] text-white/20 font-mono">{filteredProjects.length} matches</span>
+            </div>
 
-            {/* Featured Toggle */}
-            <button
-              onClick={() => setShowFeaturedOnly(!showFeaturedOnly)}
-              className={cn(
-                "px-4 py-2 rounded-full text-xs font-mono transition-all duration-300 flex items-center gap-2",
-                showFeaturedOnly
-                  ? "bg-white text-black"
-                  : "bg-white/[0.02] border border-white/10 text-white/50 hover:text-white hover:border-white/30"
-              )}
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              Featured
-            </button>
+            {/* Filter Content */}
+            <div className="p-4 space-y-4">
+              {/* Category Tabs */}
+              <div className="flex flex-wrap gap-1">
+                {categories.map((category) => (
+                  <button
+                    key={category.name}
+                    onClick={() => setActiveCategory(category.name)}
+                    className={cn(
+                      "group relative px-3 py-2 text-xs font-mono transition-all flex items-center gap-2 rounded-lg",
+                      activeCategory === category.name
+                        ? "text-white"
+                        : "text-white/40 hover:text-white/70"
+                    )}
+                  >
+                    {activeCategory === category.name && (
+                      <motion.div
+                        layoutId="activeCategory"
+                        className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-lg border border-white/20"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                    <DynamicIcon name={category.icon} className="w-3.5 h-3.5 relative z-10" />
+                    <span className="relative z-10">{category.name}</span>
+                    <span className={cn(
+                      "relative z-10 text-[10px] opacity-60",
+                      activeCategory === category.name && "opacity-100"
+                    )}>
+                      [{categoryCounts[category.name] || 0}]
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Command Line Style Filters */}
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-2 border-t border-white/5">
+                <span className="text-white/20 text-xs font-mono">$</span>
+
+                {/* Toggle Filters */}
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setShowFeaturedOnly(!showFeaturedOnly)}
+                    className={cn(
+                      "px-2 py-1 rounded text-xs font-mono transition-all flex items-center gap-1.5",
+                      showFeaturedOnly
+                        ? "bg-orange-500/20 text-orange-400 border border-orange-500/30"
+                        : "text-white/30 hover:text-white/60"
+                    )}
+                  >
+                    <Sparkles className="w-3 h-3" />
+                    --featured
+                  </button>
+                  <button
+                    onClick={() => setOwnershipFilter(ownershipFilter === "original" ? "all" : "original")}
+                    className={cn(
+                      "px-2 py-1 rounded text-xs font-mono transition-all flex items-center gap-1.5",
+                      ownershipFilter === "original"
+                        ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                        : "text-white/30 hover:text-white/60"
+                    )}
+                  >
+                    <Github className="w-3 h-3" />
+                    --mine
+                  </button>
+                  <button
+                    onClick={() => setOwnershipFilter(ownershipFilter === "contributed" ? "all" : "contributed")}
+                    className={cn(
+                      "px-2 py-1 rounded text-xs font-mono transition-all flex items-center gap-1.5",
+                      ownershipFilter === "contributed"
+                        ? "bg-purple-500/20 text-purple-400 border border-purple-500/30"
+                        : "text-white/30 hover:text-white/60"
+                    )}
+                  >
+                    <GitFork className="w-3 h-3" />
+                    --contrib
+                  </button>
+                </div>
+
+                <span className="text-white/10">|</span>
+
+                {/* Sort */}
+                <div className="flex items-center gap-1">
+                  <span className="text-white/30 text-xs font-mono">sort:</span>
+                  {[
+                    { key: "stars" as SortOption, label: "stars", icon: Star },
+                    { key: "recent" as SortOption, label: "date", icon: Clock },
+                    { key: "name" as SortOption, label: "name", icon: TrendingUp },
+                  ].map(({ key, label, icon: Icon }) => (
+                    <button
+                      key={key}
+                      onClick={() => setSortBy(key)}
+                      className={cn(
+                        "px-2 py-1 rounded text-xs font-mono transition-all flex items-center gap-1",
+                        sortBy === key
+                          ? "bg-white/10 text-white border border-white/20"
+                          : "text-white/30 hover:text-white/60"
+                      )}
+                    >
+                      <Icon className="w-3 h-3" />
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -333,17 +483,85 @@ export default function Projects() {
           animate={{ opacity: 1 }}
           className="text-white/30 mb-8 font-mono text-sm"
         >
-          {filteredProjects.length} results
+          Showing {paginatedProjects.length} of {filteredProjects.length} results
+          {totalPages > 1 && ` • Page ${currentPage} of ${totalPages}`}
         </motion.p>
 
         {/* Projects Grid */}
         <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
+            {paginatedProjects.map((project, index) => (
               <Project3DCard key={project.name} project={project} index={index} />
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex items-center justify-center gap-2 mt-12"
+          >
+            <button
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className={cn(
+                "p-2 rounded-lg transition-all flex items-center gap-1",
+                currentPage === 1
+                  ? "text-white/20 cursor-not-allowed"
+                  : "text-white/50 hover:text-white hover:bg-white/10 border border-white/10"
+              )}
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span className="text-xs font-mono hidden sm:inline">Prev</span>
+            </button>
+
+            <div className="flex items-center gap-1">
+              {Array.from({ length: totalPages }, (_, i) => i + 1)
+                .filter((page) => {
+                  // Show first, last, current, and neighbors
+                  return (
+                    page === 1 ||
+                    page === totalPages ||
+                    Math.abs(page - currentPage) <= 1
+                  );
+                })
+                .map((page, idx, arr) => (
+                  <div key={page} className="flex items-center">
+                    {idx > 0 && arr[idx - 1] !== page - 1 && (
+                      <span className="text-white/20 px-1">...</span>
+                    )}
+                    <button
+                      onClick={() => setCurrentPage(page)}
+                      className={cn(
+                        "w-8 h-8 rounded-lg text-xs font-mono transition-all",
+                        currentPage === page
+                          ? "bg-white text-black"
+                          : "text-white/50 hover:text-white hover:bg-white/10 border border-white/10"
+                      )}
+                    >
+                      {page}
+                    </button>
+                  </div>
+                ))}
+            </div>
+
+            <button
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className={cn(
+                "p-2 rounded-lg transition-all flex items-center gap-1",
+                currentPage === totalPages
+                  ? "text-white/20 cursor-not-allowed"
+                  : "text-white/50 hover:text-white hover:bg-white/10 border border-white/10"
+              )}
+            >
+              <span className="text-xs font-mono hidden sm:inline">Next</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </motion.div>
+        )}
 
         {/* No Results */}
         {filteredProjects.length === 0 && (
@@ -358,6 +576,9 @@ export default function Projects() {
                 setSearchQuery("");
                 setActiveCategory("All");
                 setShowFeaturedOnly(false);
+                setOwnershipFilter("all");
+                setSortBy("stars");
+                setCurrentPage(1);
               }}
               className="text-white/60 hover:text-white font-mono text-sm underline underline-offset-4"
             >
