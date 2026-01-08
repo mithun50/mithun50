@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import AnalyticsTracker from "@/components/analytics/AnalyticsTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -78,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <AnalyticsTracker />
         {children}
       </body>
     </html>
