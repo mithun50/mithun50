@@ -1,12 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowDown, MapPin, Github, ExternalLink, Copy, Check, GraduationCap, Rocket, Youtube, PlayCircle } from "lucide-react";
-import Link from "next/link";
+import { useState, useEffect, useRef, useMemo, useCallback } from "react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import { TechGrid, NoiseTexture } from "@/components/ui/tech-background";
-import { TextRotator } from "@/components/ui/text-rotator";
-import { useState } from "react";
+import Link from "next/link";
 
 interface ProfileData {
   name: string;
@@ -17,233 +14,283 @@ interface ProfileData {
   rotatingWords: string[];
   education: { shortName: string };
   venture: { role: string; shortName: string };
-  stats: { repos: number; stars: number; followers: number; contributions: string | number };
+  stats: {
+    repos: number;
+    stars: number;
+    followers: number;
+    contributions: string | number;
+  };
   socials: { github: string };
   nextgenx: { youtube: string; instagram: string; playstore: string };
 }
 
-export default function Hero({ profile }: { profile: ProfileData }) {
-  const [copied, setCopied] = useState(false);
+// BlurText animation component
+interface BlurTextProps {
+  text: string;
+  delay?: number;
+  animateBy?: "words" | "letters";
+  direction?: "top" | "bottom";
+  className?: string;
+  style?: React.CSSProperties;
+}
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText(profile.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+const BlurText: React.FC<BlurTextProps> = ({
+  text,
+  delay = 50,
+  animateBy = "words",
+  direction = "top",
+  className = "",
+  style,
+}) => {
+  const [inView, setInView] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const currentRef = ref.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  const segments = useMemo(() => {
+    return animateBy === "words" ? text.split(" ") : text.split("");
+  }, [text, animateBy]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#121212]">
-      {/* Subtle Background Effects */}
-      <TechGrid />
-      <NoiseTexture />
+    <span ref={ref} className={`inline-flex flex-wrap justify-center ${className}`} style={style}>
+      {segments.map((segment, i) => (
+        <span
+          key={i}
+          style={{
+            display: "inline-block",
+            filter: inView ? "blur(0px)" : "blur(10px)",
+            opacity: inView ? 1 : 0,
+            transform: inView
+              ? "translateY(0)"
+              : `translateY(${direction === "top" ? "-20px" : "20px"})`,
+            transition: `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${i * delay}ms`,
+            willChange: "filter, opacity, transform",
+            minWidth: segment === " " ? "0.3em" : undefined,
+          }}
+        >
+          {segment === " " ? "\u00A0" : segment}
+          {animateBy === "words" && i < segments.length - 1 ? "\u00A0" : ""}
+        </span>
+      ))}
+    </span>
+  );
+};
 
-      {/* Gradient overlay at top */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#121212] to-transparent z-20 pointer-events-none" />
+// Animated counter for stats
+const AnimatedNumber: React.FC<{ value: number; delay?: number }> = ({ value, delay = 0 }) => {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="flex flex-col items-center text-center">
-          {/* Profile Image */}
-          <div className="relative mb-8">
-            {/* Glow ring */}
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-violet-500/30 via-purple-500/10 to-violet-500/30 blur-md" />
-            <div className="absolute -inset-0.5 rounded-full border border-violet-500/30" />
+  useEffect(() => {
+    const currentRef = ref.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          const duration = 1500;
+          const steps = 30;
+          const stepValue = value / steps;
+          let current = 0;
 
-            {/* Profile Image */}
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-white/10">
-              <Image
-                src={profile.avatar}
-                alt={profile.name}
-                fill
-                className="object-cover"
-                priority
+          setTimeout(() => {
+            const interval = setInterval(() => {
+              current += stepValue;
+              if (current >= value) {
+                setCount(value);
+                clearInterval(interval);
+              } else {
+                setCount(Math.floor(current));
+              }
+            }, duration / steps);
+          }, delay);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [value, delay, hasAnimated]);
+
+  return <span ref={ref}>{count}</span>;
+};
+
+export default function Hero({ profile }: { profile: ProfileData }) {
+  const firstName = "MITHUN";
+  const lastName = "GOWDA B";
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const scrollToContent = useCallback(() => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  }, []);
+
+  return (
+    <section
+      id="hero"
+      className="min-h-[100dvh] relative overflow-hidden bg-[#0a0a0a]"
+    >
+      {/* Main Content */}
+      <main className="relative min-h-[100dvh] flex flex-col">
+        {/* Centered Main Name - Always Perfectly Centered */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-2 sm:px-4 pointer-events-none">
+          <div className="relative text-center">
+            {/* First Name */}
+            <h1 className="block">
+              <BlurText
+                text={firstName}
+                delay={80}
+                animateBy="letters"
+                direction="top"
+                className="font-bold text-[17vw] sm:text-[15vw] md:text-[13vw] lg:text-[160px] leading-[0.85] tracking-tighter uppercase"
+                style={{
+                  color: "#f97316",
+                  fontFamily: "var(--font-fira-code), 'Fira Code', monospace",
+                }}
               />
-            </div>
-
-            {/* Status indicator */}
-            <div className="absolute bottom-2 right-2 w-4 h-4 bg-green-400 rounded-full border-2 border-[#121212] animate-pulse" />
-          </div>
-
-          {/* Badges Row - Education & Co-Founder */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6">
-            {/* Education Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
-              <GraduationCap className="w-4 h-4 text-violet-400" />
-              <span className="font-mono text-sm text-white/70">
-                {profile.education.shortName}
-              </span>
-            </div>
-
-            {/* Co-Founder Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
-              <Rocket className="w-4 h-4 text-violet-400" />
-              <span className="font-mono text-sm text-white/70">
-                {profile.venture.role} @ {profile.venture.shortName}
-              </span>
-            </div>
-          </div>
-
-          {/* Name */}
-          <div className="relative mb-6">
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter">
-              <span className="text-white">Mithun </span>
-              <span className="text-orange-500">Gowda B</span>
             </h1>
-            {/* Decorative line */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-orange-500/50 to-transparent" />
-          </div>
+            {/* Last Name */}
+            <h1 className="block mt-1 sm:mt-2">
+              <BlurText
+                text={lastName}
+                delay={80}
+                animateBy="letters"
+                direction="top"
+                className="font-bold text-[17vw] sm:text-[15vw] md:text-[13vw] lg:text-[160px] leading-[0.85] tracking-tighter uppercase"
+                style={{
+                  color: "#f97316",
+                  fontFamily: "var(--font-fira-code), 'Fira Code', monospace",
+                }}
+              />
+            </h1>
 
-          {/* Rotating role */}
-          <div className="flex items-center gap-3 mb-8 text-lg sm:text-xl">
-            <span className="text-white/30 font-mono">&lt;</span>
-            <TextRotator
-              words={profile.rotatingWords}
-              className="text-white font-light"
-            />
-            <span className="text-white/30 font-mono">/&gt;</span>
-          </div>
-
-          {/* Bio */}
-          <p className="text-white/50 max-w-xl leading-relaxed mb-8">
-            {profile.bio}
-          </p>
-
-          {/* Location */}
-          <div className="flex items-start gap-2 text-white/30 text-sm mb-12">
-            <MapPin className="w-3 h-3 mt-0.5 flex-shrink-0" />
-            <span className="font-mono text-center">{profile.location}</span>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
-            <Link
-              href="/projects"
-              className="group relative px-8 py-3 bg-white text-black font-medium rounded-full overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+            {/* Profile Picture - Centered Overlay */}
+            <div
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-auto transition-all duration-700 delay-500 ${
+                mounted ? "opacity-100 scale-100" : "opacity-0 scale-75"
+              }`}
             >
-              <span className="relative z-10 flex items-center gap-2">
-                View Work
-                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </span>
-            </Link>
-
-            <button
-              onClick={copyEmail}
-              className="group px-8 py-3 border border-white/20 text-white font-medium rounded-full hover:border-white/40 hover:text-white transition-all flex items-center gap-2"
-            >
-              {copied ? (
-                <>
-                  <Check className="w-4 h-4 text-green-400" />
-                  <span>Copied!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4" />
-                  <span>Copy Email</span>
-                </>
-              )}
-            </button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12">
-            {[
-              { label: "Repos", value: profile.stats.repos },
-              { label: "Stars", value: profile.stats.stars },
-              { label: "Followers", value: profile.stats.followers },
-              { label: "Contributions", value: profile.stats.contributions },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="text-center group cursor-default"
-              >
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-1 font-mono tracking-tight group-hover:text-white/80 transition-colors">
-                  {stat.value}
-                  <span className="text-white/30">+</span>
-                </div>
-                <div className="text-xs text-white/30 uppercase tracking-widest">
-                  {stat.label}
-                </div>
+              <div className="relative w-[55px] h-[90px] sm:w-[75px] sm:h-[120px] md:w-[95px] md:h-[155px] lg:w-[115px] lg:h-[185px] rounded-full overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-110 cursor-pointer border-2 border-orange-500/40 hover:border-orange-500/80">
+                <Image
+                  src={profile.avatar}
+                  alt={profile.name}
+                  fill
+                  sizes="(max-width: 640px) 55px, (max-width: 768px) 75px, (max-width: 1024px) 95px, 115px"
+                  className="object-cover"
+                  priority
+                />
               </div>
-            ))}
+              {/* Online indicator */}
+              <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 sm:w-4 sm:h-4 bg-green-400 rounded-full border-2 border-[#0a0a0a] animate-pulse" />
+            </div>
           </div>
+        </div>
 
-          {/* Social Links */}
-          <div className="flex flex-col items-center gap-6 mt-16">
-            {/* Personal Links */}
-            <div className="flex items-center gap-6">
-              <a
-                href={profile.socials.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/30 hover:text-white transition-colors"
-                title="GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <div className="w-[1px] h-4 bg-white/10" />
-              <a
-                href={`mailto:${profile.email}`}
-                className="text-white/30 hover:text-white transition-colors font-mono text-sm"
-              >
-                {profile.email}
-              </a>
+        {/* Bottom Section - Tagline & Stats */}
+        <div
+          className={`absolute bottom-0 left-0 right-0 pb-14 sm:pb-16 px-4 sm:px-6 transition-all duration-700 delay-300 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div className="max-w-screen-xl mx-auto">
+            {/* Tagline */}
+            <p className="flex justify-center mb-5 sm:mb-6">
+              <BlurText
+                text="Full-Stack Developer & AI Enthusiast"
+                delay={60}
+                animateBy="words"
+                direction="bottom"
+                className="text-[12px] sm:text-sm md:text-base text-center text-neutral-400"
+                style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}
+              />
+            </p>
+
+            {/* Stats Row */}
+            <div className="flex items-center justify-center gap-8 sm:gap-12 md:gap-16 mb-5 sm:mb-6">
+              {[
+                { label: "Repos", value: profile.stats.repos, delay: 0 },
+                { label: "Stars", value: profile.stats.stars, delay: 150 },
+                { label: "Followers", value: profile.stats.followers, delay: 300 },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div
+                    className="text-xl sm:text-2xl md:text-3xl font-bold text-white tabular-nums"
+                    style={{ fontFamily: "var(--font-fira-code), 'Fira Code', monospace" }}
+                  >
+                    <AnimatedNumber value={stat.value} delay={stat.delay} />
+                    <span className="text-neutral-600">+</span>
+                  </div>
+                  <div className="text-[9px] sm:text-[10px] md:text-xs text-neutral-500 uppercase tracking-widest mt-1">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
 
-            {/* NextGenX Links */}
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-white/20 font-mono text-xs uppercase tracking-widest">NextGenX</span>
-              <div className="flex items-center justify-center gap-3">
-                <a
-                  href={profile.nextgenx.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/40 hover:text-white hover:border-white/30 transition-colors"
-                  title="YouTube"
-                >
-                  <Youtube className="w-4 h-4" />
-                  <span className="text-xs font-mono">YouTube</span>
-                </a>
-                <a
-                  href={profile.nextgenx.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/40 hover:text-white hover:border-white/30 transition-colors"
-                  title="Instagram"
-                >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                  <span className="text-xs font-mono">Instagram</span>
-                </a>
-                <a
-                  href={profile.nextgenx.playstore}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/40 hover:text-white hover:border-white/30 transition-colors"
-                  title="Play Store"
-                >
-                  <PlayCircle className="w-4 h-4" />
-                  <span className="text-xs font-mono">Play Store</span>
-                </a>
-              </div>
+            {/* CTA Buttons */}
+            <div className="flex items-center justify-center gap-3">
+              <Link
+                href="/projects"
+                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-orange-500 text-black font-semibold rounded-full text-xs sm:text-sm hover:bg-orange-400 transition-all duration-300 active:scale-95 hover:shadow-lg hover:shadow-orange-500/25"
+              >
+                View Projects
+              </Link>
+              <Link
+                href="/contact"
+                className="px-5 sm:px-6 py-2.5 sm:py-3 border border-neutral-700 text-white rounded-full text-xs sm:text-sm hover:border-orange-500 hover:text-orange-400 transition-all duration-300 active:scale-95"
+              >
+                Contact
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center gap-2 text-white/20"
-          >
-            <span className="text-xs font-mono uppercase tracking-widest">Scroll</span>
-            <ArrowDown className="w-4 h-4" />
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#121212] to-transparent z-20 pointer-events-none" />
+        <button
+          type="button"
+          onClick={scrollToContent}
+          className={`absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 p-2 transition-all duration-500 ${
+            mounted ? "opacity-100" : "opacity-0"
+          }`}
+          aria-label="Scroll to content"
+        >
+          <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-600 hover:text-orange-400 transition-colors duration-300 animate-bounce" />
+        </button>
+      </main>
     </section>
   );
 }

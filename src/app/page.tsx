@@ -14,7 +14,7 @@ export default async function Home() {
   ]);
 
   return (
-    <main className="min-h-screen bg-[#121212]">
+    <main className="min-h-screen bg-[#0a0a0a]">
       <Navbar />
       <Hero profile={profile} />
       <FeaturedProjects projects={topProjects} totalCount={allProjects.length} />

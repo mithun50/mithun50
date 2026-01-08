@@ -156,7 +156,7 @@ interface FeaturedProjectsProps {
 
 export default function FeaturedProjects({ projects, totalCount }: FeaturedProjectsProps) {
   return (
-    <section id="featured" className="py-32 relative overflow-hidden bg-[#121212]">
+    <section id="featured" className="py-32 relative overflow-hidden bg-[#0a0a0a]">
       {/* Subtle background */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div

@@ -1,13 +1,15 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Users, GitFork, Sparkles, Terminal, Zap, Globe, GraduationCap, Rocket, Youtube, PlayCircle, Github, Linkedin, Twitter, ExternalLink } from "lucide-react";
+import { Code2, Users, GitFork, Sparkles, Terminal, Zap, Globe, GraduationCap, Rocket, Youtube, PlayCircle, Github, Linkedin, Twitter, ExternalLink, MapPin } from "lucide-react";
 import { DynamicIcon } from "@/components/ui/dynamic-icon";
 import { GlassCard } from "@/components/ui/glass-card";
+import Image from "next/image";
 
 interface ProfileData {
   name: string;
+  avatar: string;
   bio: string;
   email: string;
   location: string;
@@ -56,7 +58,7 @@ export default function About({ profile }: { profile: ProfileData }) {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="pt-24 pb-20 bg-[#121212] relative overflow-hidden" ref={ref}>
+    <section id="about" className="pt-24 pb-20 bg-[#0a0a0a] relative overflow-hidden" ref={ref}>
       {/* Subtle background elements */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div
@@ -91,11 +93,122 @@ export default function About({ profile }: { profile: ProfileData }) {
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-6">
+          {/* Profile Image Card - Professional Developer Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="col-span-1 md:col-span-2 md:row-span-2"
+          >
+            <div className="relative h-full group">
+              {/* Main Card Container */}
+              <div className="relative h-full rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-sm overflow-hidden flex flex-col">
+
+                {/* Top Bar - Terminal Style */}
+                <div className="px-4 py-3 border-b border-white/[0.06] bg-black/40 backdrop-blur-md flex-shrink-0">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                      <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                      <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                    </div>
+                    <span className="text-[10px] font-mono text-white/30">developer.profile</span>
+                  </div>
+                </div>
+
+                {/* Image Container - Fixed aspect ratio */}
+                <div className="relative mx-4 mt-4 rounded-xl overflow-hidden flex-shrink-0" style={{ aspectRatio: "1/1" }}>
+                  <Image
+                    src={profile.avatar}
+                    alt={profile.name}
+                    fill
+                    className="object-cover object-top transition-all duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    priority
+                  />
+
+                  {/* Status Badge */}
+                  <div className="absolute top-3 right-3 flex items-center gap-2 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm border border-white/10">
+                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                    <span className="text-[10px] font-mono text-green-400">Available</span>
+                  </div>
+
+                  {/* Decorative corner brackets on image */}
+                  <div className="absolute top-2 left-2 w-6 h-6 border-l-2 border-t-2 border-orange-500/50 rounded-tl" />
+                  <div className="absolute top-2 right-2 w-6 h-6 border-r-2 border-t-2 border-orange-500/50 rounded-tr" />
+                  <div className="absolute bottom-2 left-2 w-6 h-6 border-l-2 border-b-2 border-orange-500/50 rounded-bl" />
+                  <div className="absolute bottom-2 right-2 w-6 h-6 border-r-2 border-b-2 border-orange-500/50 rounded-br" />
+                </div>
+
+                {/* Info Section - Below image */}
+                <div className="p-4 flex-1 flex flex-col">
+                  {/* Name with code style */}
+                  <div className="mb-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-orange-500/60 font-mono text-xs">const</span>
+                      <span className="text-purple-400/80 font-mono text-xs">developer</span>
+                      <span className="text-white/40 font-mono text-xs">=</span>
+                      <span className="text-white/40 font-mono text-xs">{"{"}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white tracking-tight pl-4 border-l-2 border-orange-500">
+                      {profile.name}
+                    </h3>
+                  </div>
+
+                  {/* Role & Details */}
+                  <div className="space-y-1.5 pl-4 text-sm flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-white/30 font-mono text-[11px]">role:</span>
+                      <span className="text-orange-400 font-mono text-xs">&quot;{profile.venture.role}&quot;</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-white/30 font-mono text-[11px]">org:</span>
+                      <span className="text-white/60 font-mono text-xs">&quot;{profile.venture.shortName}&quot;</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-white/30 font-mono text-[11px]">edu:</span>
+                      <span className="text-white/50 font-mono text-xs">&quot;{profile.education.shortName}&quot;</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-white/30 font-mono text-[11px]">loc:</span>
+                      <span className="text-white/40 font-mono text-xs">&quot;{profile.location}&quot;</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 pl-4 mt-2">
+                    <span className="text-white/40 font-mono text-xs">{"}"}</span>
+                  </div>
+
+                  {/* Social links footer */}
+                  <div className="mt-3 pt-3 border-t border-white/[0.06]">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <a href={profile.socials.github} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-orange-400 transition-colors">
+                          <Github className="w-4 h-4" />
+                        </a>
+                        <a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-orange-400 transition-colors">
+                          <Linkedin className="w-4 h-4" />
+                        </a>
+                        <a href={profile.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-orange-400 transition-colors">
+                          <Twitter className="w-4 h-4" />
+                        </a>
+                      </div>
+                      <span className="text-[10px] font-mono text-orange-500/50">// open to work</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Hover glow effect */}
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-orange-500/20 via-purple-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+            </div>
+          </motion.div>
+
           {/* Main Bio Card - Spans 4 columns */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
             className="col-span-1 md:col-span-4"
           >
             <GlassCard>
@@ -119,44 +232,6 @@ export default function About({ profile }: { profile: ProfileData }) {
                   from mobile apps to AI frameworks. As an active open-source contributor, I&apos;ve built
                   projects that gained traction in the developer community.
                 </p>
-              </div>
-            </GlassCard>
-          </motion.div>
-
-          {/* Stats Card - Spans 2 columns */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="col-span-1 md:col-span-2 md:row-span-2"
-          >
-            <GlassCard className="h-full">
-              <div className="p-8 h-full flex flex-col">
-                <h3 className="text-lg font-semibold text-white mb-8">By the numbers</h3>
-                <div className="flex-1 flex flex-col justify-between gap-6">
-                  {[
-                    { icon: Code2, label: "Repositories", value: profile.stats.repos },
-                    { icon: Users, label: "Followers", value: profile.stats.followers },
-                    { icon: Sparkles, label: "Stars", value: profile.stats.stars },
-                    { icon: GitFork, label: "Contributions", value: profile.stats.contributions },
-                  ].map((stat, index) => (
-                    <motion.div
-                      key={stat.label}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ delay: 0.4 + index * 0.1 }}
-                      className="flex items-center justify-between group"
-                    >
-                      <div className="flex items-center gap-3">
-                        <stat.icon className="w-4 h-4 text-white/30 group-hover:text-white/60 transition-colors" />
-                        <span className="text-white/50 text-sm">{stat.label}</span>
-                      </div>
-                      <span className="text-white font-mono text-xl font-bold">
-                        {stat.value}<span className="text-white/30">+</span>
-                      </span>
-                    </motion.div>
-                  ))}
-                </div>
               </div>
             </GlassCard>
           </motion.div>

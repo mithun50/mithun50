@@ -34,7 +34,7 @@ export default function Skills({ skills }: SkillsProps) {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-20 bg-[#121212] relative overflow-hidden" ref={ref}>
+    <section className="py-20 bg-[#0a0a0a] relative overflow-hidden" ref={ref}>
       {/* Subtle grid background */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div
