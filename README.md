@@ -41,7 +41,6 @@
 ---
 
 ## 🚀 Notable Contributions  
-![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&theme=dark&limit=11&combine_all_yearly_contributions=true)
 
 - **SuperClaude** — Contributed to a modular platform for advanced reasoning and enhancements. [🔗 Project](https://github.com/SuperClaude-Org/SuperClaude_Framework) | [🌐 Website](https://superclaude.netlify.app)  
 - **Engineering Kannada** — Helping make engineering concepts accessible in Kannada. [🔗 Project](https://github.com/chandansgowda/engineering-in-kannada) | [🌐 Website](https://engineeringinkannada.in)  
@@ -65,12 +64,10 @@
 [![Mithun's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mithun50&bg_color=0d1117&color=4CAF50&line=4CAF50&point=FFFFFF&area=true&hide_border=true)](https://github.com/mithun50)
 [![Mithun's github activity graph_summery](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mithun50&theme=github_dark)](https://github.com/mithun50)
 
----
-
-### 🏆 GitHub Trophies  
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=mithun50&theme=tokyonight&margin-w=10&margin-h=10"/>
+  <img src="profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" />
 </p>
+
 
 ---
 
@@ -100,6 +97,7 @@
     <img src="https://skillicons.dev/icons?i=discord" width="40" height="40" alt="LinkedIn"/>
   </a>
 </p>
+
 
 ---
 
