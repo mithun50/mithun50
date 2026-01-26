@@ -13,7 +13,7 @@ jobs:
       - name: Generate Profile Image
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB }}
           USERNAME: ${{ github.repository_owner }}
 
       - name: Commit & Push
