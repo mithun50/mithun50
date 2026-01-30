@@ -22,4 +22,4 @@ jobs:
           git config user.email github-actions@github.com
           git add -A .
           git commit -m "Update profile image"
-          git push
+          git push -f
