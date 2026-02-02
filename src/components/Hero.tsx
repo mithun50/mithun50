@@ -230,7 +230,7 @@ export default function Hero({ profile }: { profile: ProfileData }) {
             {/* Tagline */}
             <p className="flex justify-center mb-5 sm:mb-6">
               <BlurText
-                text="Full-Stack Developer & AI Enthusiast"
+                text="Full-Stack Developer | AI Enthusiast | Cybersecurity"
                 delay={60}
                 animateBy="words"
                 direction="bottom"

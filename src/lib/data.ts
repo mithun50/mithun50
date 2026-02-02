@@ -3,7 +3,7 @@ import { fetchGitHubUser, fetchGitHubRepos, fetchGitHubStats, GitHubRepo } from 
 // Static profile data (doesn't change)
 export const staticProfile = {
   name: "Mithun Gowda B",
-  tagline: "Full-Stack Developer & AI Enthusiast",
+  tagline: "Full-Stack Developer | AI Enthusiast | Cybersecurity",
   bio: "Engineering student at Don Bosco Institute of Technology, passionate about building innovative solutions through code. Co-Founder of NextGenXplorrers (NextGenX) and active open-source contributor with expertise in AI frameworks, mobile development, and web technologies.",
   email: "mithungowda.b7411@gmail.com",
   location: "Akkur, Akkur Post, Ramanagara Taluk & District, Karnataka, India",
@@ -24,7 +24,7 @@ export const staticProfile = {
     description: "Tech exploration and innovation community",
   },
 
-  rotatingWords: ["Developer", "Innovator", "Creator", "Engineer", "Co-Founder"],
+  rotatingWords: ["Developer", "Innovator", "Creator", "Engineer", "Co-Founder", "Security Enthusiast"],
 
   socials: {
     github: "https://github.com/mithun50",
@@ -152,7 +152,18 @@ export async function getDynamicSkills() {
     { name: "Termux", icon: "Terminal" },
   ];
 
-  return { languages, frameworks, tools, platforms };
+  const cybersecurity = [
+    { name: "Kali Linux", icon: "Shield" },
+    { name: "Burp Suite", icon: "Bug" },
+    { name: "Wireshark", icon: "Network" },
+    { name: "Nmap", icon: "Radar" },
+    { name: "Metasploit", icon: "Skull" },
+    { name: "OWASP", icon: "ShieldAlert" },
+    { name: "Pentesting", icon: "KeyRound" },
+    { name: "CTF", icon: "Flag" },
+  ];
+
+  return { languages, frameworks, tools, platforms, cybersecurity };
 }
 
 // Category mapping for repos
