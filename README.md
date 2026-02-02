@@ -1,124 +1,199 @@
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,14,25,27&height=200&section=header&text=Mithun%20Gowda%20B&fontSize=60&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Open%20Source&descSize=18&descAlignY=55"/>
+
 <div align="center">
 
-# Hey there, I'm Mithun Gowda B <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28">
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=80&lines=%E2%9A%A1+Building+the+future%2C+one+commit+at+a+time;%F0%9F%9A%80+Co-Founder+%40+NextGenXplorrers+%7C+Open+Source+Advocate)](https://mithungowda.in)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=Full-Stack+Developer+%7C+AI+Enthusiast;Open+Source+Contributor+%7C+Co-Founder;Building+the+future%2C+one+commit+at+a+time)](https://mithungowda.in)
+<a href="https://mithungowda.in"><img src="https://img.shields.io/badge/%F0%9F%8C%90_mithungowda.in-Visit_Portfolio-A855F7?style=for-the-badge&labelColor=1a1a2e"/></a>
+<img src="https://img.shields.io/badge/Based_in-Karnataka,_India-16a34a?style=for-the-badge&labelColor=1a1a2e"/>
+<img src="https://img.shields.io/badge/Coding_From-Termux_on_Android-f97316?style=for-the-badge&labelColor=1a1a2e&logo=android"/>
 
-<a href="https://mithungowda.in" target="_blank">
-  <img src="https://img.shields.io/badge/Portfolio-mithungowda.in-6366F1?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/>
-</a>
-<a href="mailto:mithungowda.b7411@gmail.com">
-  <img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-</a>
-<a href="https://linkedin.com/in/mithungowdab" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-</a>
+</div>
 
 <br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=mithun50&label=Profile%20Views&color=6366F1&style=flat-square)
-![Followers](https://img.shields.io/github/followers/mithun50?label=Followers&style=flat-square&color=6366F1)
-![Stars](https://img.shields.io/github/stars/mithun50?label=Stars&style=flat-square&color=6366F1&affiliations=OWNER)
-
+<!-- Snake Animation -->
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mithun50/mithun50/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mithun50/mithun50/output/github-snake.svg" />
+    <img alt="github-snake" src="https://raw.githubusercontent.com/mithun50/mithun50/output/github-snake-dark.svg" />
+  </picture>
 </div>
 
 ---
 
-## About Me
+<table>
+<tr>
+<td width="50%" valign="top">
 
-```yaml
-name: Mithun Gowda B
-location: Karnataka, India
-education: Engineering @ Don Bosco Institute of Technology (DBIT)
-role: Co-Founder @ NextGenXplorrers
+## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> About Me
 
-current_focus:
-  - AI Frameworks & MCP Development
-  - Open Source Contributions
-  - Full-Stack Web & Mobile Apps
+```js
+const mithun = {
+  pronouns: "he" | "him",
+  location: "Karnataka, India",
 
-fun_fact: I code from Termux on Android
+  education: {
+    institution: "DBIT",
+    degree: "Engineering",
+    year: "1st Year"
+  },
+
+  roles: [
+    "Co-Founder @ NextGenXplorrers",
+    "Open Source Contributor",
+    "AI Framework Developer"
+  ],
+
+  currentlyLearning: ["System Design", "ML/AI"],
+
+  funFact: "I push code from Termux",
+
+  askMeAbout: [
+    "Python", "AI Frameworks",
+    "MCP Development", "Flutter"
+  ]
+};
 ```
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mithun50&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&langs_count=8" width="320"/>
+</td>
+<td width="50%" valign="top">
 
-### Quick Facts
+## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30"> GitHub Stats
 
-- Co-Founder of **[NextGenXplorrers](https://instagram.com/nexgenxplorerr)**
-- Contributor to **SuperClaude**, **Devr.AI**, **SecOps Wrapper**
-- Published on **[PyPI](https://pypi.org/user/mithungowda.b)** & **[npm](https://npmjs.com/~mithun50)**
-- Currently exploring **AI/ML** and **System Design**
+<img src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=A855F7&icon_color=A855F7&text_color=c9d1d9&ring_color=A855F7" width="100%"/>
 
-<br clear="right"/>
+<img src="https://github-readme-streak-stats.herokuapp.com?user=mithun50&theme=radical&hide_border=true&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7" width="100%"/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mithun50&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=A855F7&langs_count=8" width="100%"/>
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Tech Stack
+## <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="25"> Tech Arsenal
 
 <div align="center">
 
-### Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                        LANGUAGES                                  ║
+╠══════════════════════════════════════════════════════════════════╣
+```
 
-### Frameworks & Tools
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Python](https://img.shields.io/badge/Python-Expert-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=1a1a2e)
+![TypeScript](https://img.shields.io/badge/TypeScript-Advanced-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=1a1a2e)
+![JavaScript](https://img.shields.io/badge/JavaScript-Advanced-F7DF1E?style=flat-square&logo=javascript&logoColor=black&labelColor=1a1a2e)
+![Dart](https://img.shields.io/badge/Dart-Intermediate-0175C2?style=flat-square&logo=dart&logoColor=white&labelColor=1a1a2e)
+![Java](https://img.shields.io/badge/Java-Intermediate-ED8B00?style=flat-square&logo=openjdk&logoColor=white&labelColor=1a1a2e)
+![Kotlin](https://img.shields.io/badge/Kotlin-Learning-7F52FF?style=flat-square&logo=kotlin&logoColor=white&labelColor=1a1a2e)
+![C++](https://img.shields.io/badge/C++-DSA-00599C?style=flat-square&logo=cplusplus&logoColor=white&labelColor=1a1a2e)
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                    FRAMEWORKS & TOOLS                             ║
+╠══════════════════════════════════════════════════════════════════╣
+```
+
+<img src="https://skillicons.dev/icons?i=react,nextjs,flask,fastapi,flutter,nodejs,express,tailwind&theme=dark" />
+<br/>
+<img src="https://skillicons.dev/icons?i=git,linux,docker,firebase,vercel,netlify,gcp,tensorflow&theme=dark" />
 
 </div>
 
 ---
 
-## Notable Contributions
-
-![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&theme=tokyonight&limit=11&combine_all_yearly_contributions=true&hide_border=true&bg_color=0d1117)
-
-| Project | Description | Links |
-|---------|-------------|-------|
-| **SuperClaude** | Modular platform for advanced AI reasoning | [Repo](https://github.com/anthropics/claude-code) · [Web](https://superclaude.netlify.app) |
-| **Google SecOps Wrapper** | Security automation SDK for Google Cloud | [Repo](https://github.com/google/secops-wrapper) |
-| **AOSSIE - Devr.AI** | AI-powered Developer Relations assistant | [Repo](https://github.com/AOSSIE-Org/Devr.AI) |
-| **Engineering Kannada** | Engineering concepts in regional language | [Repo](https://github.com/chandansgowda/engineering-in-kannada) · [Web](https://engineeringinkannada.in) |
-
----
-
-## GitHub Analytics
+## <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="25"> Open Source Journey
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6366F1&icon_color=6366F1" height="180"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=mithun50&theme=tokyonight&hide_border=true&background=0d1117&ring=6366F1&fire=6366F1&currStreakLabel=6366F1" height="180"/>
+```
+   ╭──────────────────────────────────────────────────────────────╮
+   │                    🏆 MAJOR CONTRIBUTIONS                    │
+   ╰──────────────────────────────────────────────────────────────╯
+```
 
 </div>
 
-### Activity Graph
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=mithun50&bg_color=0d1117&color=6366F1&line=6366F1&point=FFFFFF&area=true&hide_border=true)](https://github.com/mithun50)
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Anthropic-Claude_Code-191919?style=for-the-badge&logo=anthropic&logoColor=white"/>
+<br/><br/>
+<b>SuperClaude</b>
+<br/>
+<sub>AI Framework for Claude</sub>
+<br/><br/>
+<a href="https://github.com/anthropics/claude-code"><img src="https://img.shields.io/badge/View-Project-A855F7?style=flat-square"/></a>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Google-SecOps_Wrapper-4285F4?style=for-the-badge&logo=google&logoColor=white"/>
+<br/><br/>
+<b>SecOps SDK</b>
+<br/>
+<sub>Security Automation</sub>
+<br/><br/>
+<a href="https://github.com/google/secops-wrapper"><img src="https://img.shields.io/badge/View-Project-A855F7?style=flat-square"/></a>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/AOSSIE-Devr.AI-FF6B6B?style=for-the-badge&logo=probot&logoColor=white"/>
+<br/><br/>
+<b>Devr.AI</b>
+<br/>
+<sub>AI DevRel Assistant</sub>
+<br/><br/>
+<a href="https://github.com/AOSSIE-Org/Devr.AI"><img src="https://img.shields.io/badge/View-Project-A855F7?style=flat-square"/></a>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Community-Engineering_Kannada-16a34a?style=for-the-badge&logo=bookstack&logoColor=white"/>
+<br/><br/>
+<b>Eng Kannada</b>
+<br/>
+<sub>Regional Education</sub>
+<br/><br/>
+<a href="https://engineeringinkannada.in"><img src="https://img.shields.io/badge/View-Project-A855F7?style=flat-square"/></a>
+</td>
+</tr>
+</table>
 
 <div align="center">
 
-[![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mithun50&theme=tokyonight)](https://github.com/mithun50)
+![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&theme=radical&limit=6&combine_all_yearly_contributions=true&hide_border=true&bg_color=0d1117)
 
 </div>
 
-<!-- 3D Contribution Graph - Auto Updated by GitHub Actions -->
-<p align="center">
-  <img src="profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" />
-</p>
-
 ---
 
-## Achievements
+## <img src="https://media.giphy.com/media/cj87CxfRtrUifF3Ber/giphy.gif" width="25"> Analytics & Metrics
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=mithun50&bg_color=0d1117&color=A855F7&line=A855F7&point=FFFFFF&area=true&hide_border=true&custom_title=Contribution%20Graph" width="100%"/>
+
+</div>
+
+<details>
+<summary><b>📊 More Stats</b></summary>
+<br/>
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mithun50&theme=radical" width="100%"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mithun50&theme=radical" width="32%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=mithun50&theme=radical" width="32%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=mithun50&theme=radical&utcOffset=5.5" width="32%"/>
+
+</div>
+
+</details>
+
+<details>
+<summary><b>🏆 GitHub Trophies</b></summary>
+<br/>
 
 <div align="center">
 
@@ -126,19 +201,56 @@ fun_fact: I code from Termux on Android
 
 </div>
 
+</details>
+
+<details>
+<summary><b>📈 3D Contribution Graph</b></summary>
+<br/>
+
+<div align="center">
+  <img src="profile-3d-contrib/profile-night-green.svg" width="100%"/>
+</div>
+
+</details>
+
 ---
 
-## Connect with Me
+## <img src="https://media.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.gif" width="25"> My Ventures
 
 <div align="center">
 
-<a href="https://mithungowda.in" target="_blank"><img src="https://skillicons.dev/icons?i=vercel" width="40" height="40" alt="Website"/></a>&nbsp;&nbsp;
-<a href="https://github.com/mithun50" target="_blank"><img src="https://skillicons.dev/icons?i=github" width="40" height="40" alt="GitHub"/></a>&nbsp;&nbsp;
-<a href="https://linkedin.com/in/mithungowdab" target="_blank"><img src="https://skillicons.dev/icons?i=linkedin" width="40" height="40" alt="LinkedIn"/></a>&nbsp;&nbsp;
-<a href="https://x.com/mithungowdab" target="_blank"><img src="https://skillicons.dev/icons?i=twitter" width="40" height="40" alt="X"/></a>&nbsp;&nbsp;
-<a href="https://instagram.com/mithun.gowda.b" target="_blank"><img src="https://skillicons.dev/icons?i=instagram" width="40" height="40" alt="Instagram"/></a>&nbsp;&nbsp;
-<a href="https://discord.gg/eamXcxtd" target="_blank"><img src="https://skillicons.dev/icons?i=discord" width="40" height="40" alt="Discord"/></a>&nbsp;&nbsp;
-<a href="mailto:mithungowda.b7411@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" width="40" height="40" alt="Gmail"/></a>
+<a href="https://instagram.com/nexgenxplorerr">
+<img src="https://img.shields.io/badge/NextGenXplorrers-Co--Founder-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=1a1a2e"/>
+</a>
+<a href="https://youtube.com/@nexgenxplorer">
+<img src="https://img.shields.io/badge/YouTube-@nexgenxplorer-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=1a1a2e"/>
+</a>
+<a href="https://play.google.com/store/apps/dev?id=8262374975871504599">
+<img src="https://img.shields.io/badge/Play_Store-Published_Apps-3DDC84?style=for-the-badge&logo=googleplay&logoColor=white&labelColor=1a1a2e"/>
+</a>
+
+</div>
+
+---
+
+## <img src="https://media.giphy.com/media/dxn6fRlTIShoeBr69N/giphy.gif" width="25"> Connect & Collaborate
+
+<div align="center">
+
+<a href="https://mithungowda.in"><img src="https://img.shields.io/badge/Portfolio-mithungowda.in-A855F7?style=for-the-badge&logo=safari&logoColor=white&labelColor=1a1a2e"/></a>
+<a href="mailto:mithungowda.b7411@gmail.com"><img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1a1a2e"/></a>
+
+<br/><br/>
+
+<a href="https://github.com/mithun50"><img src="https://img.shields.io/badge/GitHub-mithun50-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1a1a2e"/></a>
+<a href="https://linkedin.com/in/mithungowdab"><img src="https://img.shields.io/badge/LinkedIn-mithungowdab-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1a1a2e"/></a>
+<a href="https://x.com/mithungowdab"><img src="https://img.shields.io/badge/X-@mithungowdab-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=1a1a2e"/></a>
+
+<br/><br/>
+
+<a href="https://pypi.org/user/mithungowda.b"><img src="https://img.shields.io/badge/PyPI-Packages-3775A9?style=for-the-badge&logo=pypi&logoColor=white&labelColor=1a1a2e"/></a>
+<a href="https://npmjs.com/~mithun50"><img src="https://img.shields.io/badge/npm-Packages-CB3837?style=for-the-badge&logo=npm&logoColor=white&labelColor=1a1a2e"/></a>
+<a href="https://discord.gg/eamXcxtd"><img src="https://img.shields.io/badge/Discord-Join_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=1a1a2e"/></a>
 
 </div>
 
@@ -146,8 +258,22 @@ fun_fact: I code from Termux on Android
 
 <div align="center">
 
-**Thanks for visiting!** <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
+### 💭 Random Dev Quote
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=6366F1&height=80&section=footer"/>
+![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 </div>
+
+---
+
+<div align="center">
+
+<img src="https://komarev.com/ghpvc/?username=mithun50&label=Profile%20Views&color=A855F7&style=for-the-badge"/>
+
+**<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="40"> Thanks for stopping by!**
+
+*"The best way to predict the future is to create it."*
+
+</div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,25,27&height=120&section=footer"/>
