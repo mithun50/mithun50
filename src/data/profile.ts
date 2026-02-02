@@ -1,6 +1,6 @@
 export const profile = {
   name: "Mithun Gowda B",
-  tagline: "Full-Stack Developer & AI Enthusiast",
+  tagline: "Full-Stack Developer | AI Enthusiast | Cybersecurity",
   bio: "Engineering student at Don Bosco Institute of Technology, passionate about building innovative solutions through code. Co-Founder of NextGenXplorrers (NextGenX) and active open-source contributor with expertise in AI frameworks, mobile development, and web technologies.",
   location: "Karnataka, India",
   status: "Engineering Student @ DBIT",
@@ -25,7 +25,7 @@ export const profile = {
     description: "Tech exploration and innovation community",
   },
 
-  rotatingWords: ["Developer", "Innovator", "Creator", "Engineer", "Co-Founder"],
+  rotatingWords: ["Developer", "Innovator", "Creator", "Engineer", "Co-Founder", "Security Enthusiast"],
 
   stats: {
     repos: 60,
@@ -100,6 +100,16 @@ export const skills = {
     { name: "GitHub Pages", icon: "Github" },
     { name: "Google Cloud", icon: "Cloud" },
     { name: "Termux", icon: "Terminal" },
+  ],
+  cybersecurity: [
+    { name: "Kali Linux", icon: "Shield" },
+    { name: "Burp Suite", icon: "Bug" },
+    { name: "Wireshark", icon: "Network" },
+    { name: "Nmap", icon: "Radar" },
+    { name: "Metasploit", icon: "Skull" },
+    { name: "OWASP", icon: "ShieldAlert" },
+    { name: "Pentesting", icon: "KeyRound" },
+    { name: "CTF", icon: "Flag" },
   ],
 };
 

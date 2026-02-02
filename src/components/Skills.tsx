@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Layers, Wrench, Cloud } from "lucide-react";
+import { Code2, Layers, Wrench, Cloud, Shield } from "lucide-react";
 import { DynamicIcon } from "@/components/ui/dynamic-icon";
 import { GlassCard } from "@/components/ui/glass-card";
 
@@ -17,6 +17,7 @@ interface SkillsData {
   frameworks: Skill[];
   tools: Skill[];
   platforms: Skill[];
+  cybersecurity?: Skill[];
 }
 
 interface SkillsProps {
@@ -29,6 +30,7 @@ export default function Skills({ skills }: SkillsProps) {
     { title: "Frameworks", icon: Layers, items: skills.frameworks },
     { title: "Tools", icon: Wrench, items: skills.tools },
     { title: "Platforms", icon: Cloud, items: skills.platforms },
+    ...(skills.cybersecurity ? [{ title: "Cybersecurity", icon: Shield, items: skills.cybersecurity }] : []),
   ];
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });

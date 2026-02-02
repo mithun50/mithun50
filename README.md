@@ -1,8 +1,8 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,14,25,27&height=200&section=header&text=Mithun%20Gowda%20B&fontSize=60&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Open%20Source&descSize=18&descAlignY=55"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,14,25,27&height=200&section=header&text=Mithun%20Gowda%20B&fontSize=60&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Cybersecurity&descSize=18&descAlignY=55"/>
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=80&lines=%E2%9A%A1+Building+the+future%2C+one+commit+at+a+time;%F0%9F%9A%80+Co-Founder+%40+NextGenXplorrers+%7C+Open+Source+Advocate)](https://mithungowda.in)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=80&lines=%E2%9A%A1+Building+the+future%2C+one+commit+at+a+time;%F0%9F%9B%A1%EF%B8%8F+Cybersecurity+Enthusiast+%7C+Open+Source+Advocate)](https://mithungowda.in)
 
 <a href="https://mithungowda.in"><img src="https://img.shields.io/badge/%F0%9F%8C%90_mithungowda.in-Visit_Portfolio-A855F7?style=for-the-badge&labelColor=1a1a2e"/></a>
 <img src="https://img.shields.io/badge/Based_in-Karnataka,_India-16a34a?style=for-the-badge&labelColor=1a1a2e"/>
@@ -43,16 +43,17 @@ const mithun = {
   roles: [
     "Co-Founder @ NextGenXplorrers",
     "Open Source Contributor",
-    "AI Framework Developer"
+    "AI Framework Developer",
+    "Cybersecurity Enthusiast"
   ],
 
-  currentlyLearning: ["System Design", "ML/AI"],
+  currentlyLearning: ["System Design", "ML/AI", "Pentesting"],
 
   funFact: "I push code from Termux",
 
   askMeAbout: [
     "Python", "AI Frameworks",
-    "MCP Development", "Flutter"
+    "MCP Development", "Cybersecurity"
   ]
 };
 ```
@@ -78,11 +79,7 @@ const mithun = {
 
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                        LANGUAGES                                  ║
-╠══════════════════════════════════════════════════════════════════╣
-```
+**Languages**
 
 ![Python](https://img.shields.io/badge/Python-Expert-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=1a1a2e)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Advanced-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=1a1a2e)
@@ -91,12 +88,18 @@ const mithun = {
 ![Java](https://img.shields.io/badge/Java-Intermediate-ED8B00?style=flat-square&logo=openjdk&logoColor=white&labelColor=1a1a2e)
 ![Kotlin](https://img.shields.io/badge/Kotlin-Learning-7F52FF?style=flat-square&logo=kotlin&logoColor=white&labelColor=1a1a2e)
 ![C++](https://img.shields.io/badge/C++-DSA-00599C?style=flat-square&logo=cplusplus&logoColor=white&labelColor=1a1a2e)
+![Bash](https://img.shields.io/badge/Bash-Scripting-4EAA25?style=flat-square&logo=gnubash&logoColor=white&labelColor=1a1a2e)
 
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                    FRAMEWORKS & TOOLS                             ║
-╠══════════════════════════════════════════════════════════════════╣
-```
+**Cybersecurity**
+
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white&labelColor=1a1a2e)
+![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=flat-square&logo=burpsuite&logoColor=white&labelColor=1a1a2e)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white&labelColor=1a1a2e)
+![Nmap](https://img.shields.io/badge/Nmap-0E83CD?style=flat-square&logo=nmap&logoColor=white&labelColor=1a1a2e)
+![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=flat-square&logo=metasploit&logoColor=white&labelColor=1a1a2e)
+![OWASP](https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=white&labelColor=1a1a2e)
+
+**Frameworks & Tools**
 
 <img src="https://skillicons.dev/icons?i=react,nextjs,flask,fastapi,flutter,nodejs,express,tailwind&theme=dark" />
 <br/>
@@ -110,11 +113,7 @@ const mithun = {
 
 <div align="center">
 
-```
-   ╭──────────────────────────────────────────────────────────────╮
-   │                    🏆 MAJOR CONTRIBUTIONS                    │
-   ╰──────────────────────────────────────────────────────────────╯
-```
+### 🏆 Major Contributions
 
 </div>
 
@@ -197,7 +196,7 @@ const mithun = {
 
 <div align="center">
 
-[![Trophies](https://github-profile-trophy.vercel.app/?username=mithun50&theme=discord&no-frame=true&no-bg=true&column=7&margin-w=10)](https://github.com/mithun50)
+<img src="https://github-trophies.vercel.app/?username=mithun50&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=15" alt="Trophies"/>
 
 </div>
 
