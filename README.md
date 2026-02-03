@@ -160,7 +160,7 @@ const mithun = {
 
 <div align="center">
 
-![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&theme=radical&limit=6&combine_all_yearly_contributions=true&hide_border=true&bg_color=0d1117)
+![Contributions](https://github-contributor-stats.vercel.app/api?username=mithun50&theme=radical&limit=10&combine_all_yearly_contributions=true&hide_border=true&bg_color=0d1117)
 
 </div>
 
