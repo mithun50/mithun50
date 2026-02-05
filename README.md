@@ -63,11 +63,11 @@ const mithun = {
 
 ## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30"> GitHub Stats
 
-<img src="https://github-readme-stats.vercel.app/api?username=mithun50&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=A855F7&icon_color=A855F7&text_color=c9d1d9&ring_color=A855F7" width="100%"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=mithun50&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=A855F7&icon_color=A855F7&text_color=c9d1d9&ring_color=A855F7" width="100%"/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com?user=mithun50&theme=radical&hide_border=true&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7" width="100%"/>
+<img src="https://streak-stats.demolab.com?user=mithun50&theme=radical&hide_border=true&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7" width="100%"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mithun50&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=A855F7&langs_count=8" width="100%"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=mithun50&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=A855F7&langs_count=8" width="100%"/>
 
 </td>
 </tr>
@@ -166,7 +166,7 @@ const mithun = {
 
 ---
 
-## <img src="https://media.giphy.com/media/cj87CxfRtrUifF3Ber/giphy.gif" width="25"> Analytics & Metrics
+## <img src="https://media.giphy.com/media/W5eoZHPpUx9sapR0eu/giphy.gif" width="25"> Analytics & Metrics
 
 <div align="center">
 
