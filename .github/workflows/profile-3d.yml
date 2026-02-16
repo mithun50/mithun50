@@ -47,4 +47,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update profile animations" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update profile animations Co-Authored-By: Mithun Gowda B <mithungowda.b7411@gmail.com>" && git push)
