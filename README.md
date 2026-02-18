@@ -5,6 +5,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=80&lines=%E2%9A%A1+Building+the+future%2C+one+commit+at+a+time;%F0%9F%9B%A1%EF%B8%8F+Cybersecurity+Enthusiast+%7C+Open+Source+Advocate)](https://mithungowda.in)
 
 <a href="https://mithungowda.in"><img src="https://img.shields.io/badge/%F0%9F%8C%90_mithungowda.in-Visit_Portfolio-A855F7?style=for-the-badge&labelColor=1a1a2e"/></a>
+<a href="https://mithungowda.in/resume.html"><img src="https://img.shields.io/badge/%F0%9F%93%84_Resume-View_Resume-1a6dd4?style=for-the-badge&labelColor=1a1a2e"/></a>
 <img src="https://img.shields.io/badge/Based_in-Karnataka,_India-16a34a?style=for-the-badge&labelColor=1a1a2e"/>
 <img src="https://img.shields.io/badge/Coding_From-Termux_on_Android-f97316?style=for-the-badge&labelColor=1a1a2e&logo=android"/>
 

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mithun Gowda B - Resume</title>
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.38;
+    color: #1a1a1a;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a {
+    color: #1a6dd4;
+    text-decoration: underline;
+    text-underline-offset: 1.5pt;
+  }
+
+  a:hover {
+    color: #0d4ea6;
+  }
+
+  @media print {
+    a {
+      color: #1a6dd4;
+      text-decoration: underline;
+    }
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 12mm 16mm 10mm 16mm;
+  }
+
+  @media print {
+    .page {
+      padding: 12mm 15mm 10mm 15mm;
+      margin: 0;
+    }
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding-bottom: 7pt;
+    border-bottom: 2.5pt solid #1a1a1a;
+    margin-bottom: 8pt;
+  }
+
+  .header h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    margin-bottom: 2pt;
+  }
+
+  .header .tagline {
+    font-size: 9.5pt;
+    color: #333;
+    margin-bottom: 4pt;
+  }
+
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3pt 12pt;
+    font-size: 9pt;
+    color: #333;
+  }
+
+  .contact-row .sep { color: #666; }
+
+  .links-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2pt 10pt;
+    font-size: 8.5pt;
+    margin-top: 3pt;
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 7pt;
+  }
+
+  .section-title {
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2pt;
+    border-bottom: 1.5pt solid #1a1a1a;
+    padding-bottom: 2pt;
+    margin-bottom: 5pt;
+    color: #1a1a1a;
+  }
+
+  /* Summary */
+  .summary p {
+    font-size: 9pt;
+    color: #333;
+    line-height: 1.45;
+  }
+
+  /* Experience */
+  .entry {
+    margin-bottom: 5pt;
+  }
+
+  .entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .entry-title {
+    font-weight: 600;
+    font-size: 9.5pt;
+  }
+
+  .entry-date {
+    font-size: 8.5pt;
+    color: #1a1a1a;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .entry-desc {
+    font-size: 9pt;
+    color: #222;
+    margin-top: 1pt;
+    line-height: 1.38;
+  }
+
+  .entry-bullets {
+    font-size: 9pt;
+    color: #222;
+    margin-top: 2pt;
+    padding-left: 15pt;
+    line-height: 1.42;
+    list-style-type: disc;
+  }
+
+  .entry-bullets li {
+    margin-bottom: 1pt;
+    padding-left: 2pt;
+  }
+
+  .entry-bullets li::marker {
+    color: #1a1a1a;
+    font-size: 9pt;
+  }
+
+  /* Projects */
+  .project-grid {
+    padding-left: 15pt;
+    list-style-type: disc;
+  }
+
+  .project-grid li {
+    font-size: 9pt;
+    line-height: 1.42;
+    margin-bottom: 2pt;
+    padding-left: 2pt;
+    color: #222;
+  }
+
+  .project-grid li::marker {
+    color: #1a1a1a;
+    font-size: 9pt;
+  }
+
+  .project-grid strong {
+    font-weight: 600;
+  }
+
+  .project-stars {
+    font-size: 8pt;
+    color: #444;
+  }
+
+  /* Contributions */
+  .contrib-grid {
+    padding-left: 15pt;
+    list-style-type: disc;
+  }
+
+  .contrib-grid li {
+    font-size: 9pt;
+    line-height: 1.42;
+    margin-bottom: 2pt;
+    padding-left: 2pt;
+    color: #222;
+  }
+
+  .contrib-grid li::marker {
+    color: #1a1a1a;
+    font-size: 9pt;
+  }
+
+  .contrib-grid strong {
+    font-weight: 600;
+  }
+
+  .contrib-stars {
+    font-size: 8pt;
+    color: #444;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 92pt 1fr;
+    gap: 2pt 8pt;
+    font-size: 9pt;
+  }
+
+  .skill-label {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .skill-value {
+    color: #222;
+  }
+
+  /* Packages */
+  .packages-grid {
+    padding-left: 15pt;
+    list-style-type: disc;
+    font-size: 9pt;
+    color: #222;
+  }
+
+  .packages-grid li {
+    margin-bottom: 2pt;
+    padding-left: 2pt;
+    line-height: 1.42;
+  }
+
+  .packages-grid li::marker {
+    color: #1a1a1a;
+    font-size: 9pt;
+  }
+
+  .pkg-label {
+    font-weight: 600;
+  }
+
+  /* Achievements */
+  .achievements-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2pt 14pt;
+    font-size: 9pt;
+    color: #222;
+  }
+
+  .achievements-list .item::before {
+    content: "\2022\00a0";
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  /* Education */
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .edu-title {
+    font-weight: 600;
+    font-size: 9.5pt;
+  }
+
+  .edu-date {
+    font-size: 8.5pt;
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+
+  .edu-detail {
+    font-size: 9pt;
+    color: #333;
+  }
+
+  /* Screen preview */
+  @media screen {
+    body { background: #e0e0e0; }
+    .page {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+      margin: 16px auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Mithun Gowda B</h1>
+    <div class="tagline">Full-Stack Developer &middot; AI Frameworks &middot; Open Source &middot; Cybersecurity</div>
+    <div class="contact-row">
+      <span><a href="mailto:mithungowda.b7411@gmail.com">mithungowda.b7411@gmail.com</a></span>
+      <span class="sep">|</span>
+      <span>Ramanagara, Karnataka, India</span>
+      <span class="sep">|</span>
+      <span><a href="https://mithungowda.in">mithungowda.in</a></span>
+    </div>
+    <div class="links-row">
+      <a href="https://github.com/mithun50">GitHub</a>
+      <a href="https://linkedin.com/in/mithungowdab">LinkedIn</a>
+      <a href="https://twitter.com/MithunGowdaB">X/Twitter</a>
+      <a href="https://www.npmjs.com/~mithun50">npm</a>
+      <a href="https://pypi.org/user/mithungowda.b">PyPI</a>
+      <a href="https://huggingface.co/mithun50">HuggingFace</a>
+      <a href="https://orcid.org/0009-0000-7572-8379">ORCID</a>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section summary">
+    <div class="section-title">Summary</div>
+    <p>Computer Science engineering student and Co-Founder specializing in AI frameworks, full-stack development, and cybersecurity. Active open-source contributor with 500+ contributions, 77 public repos, 98 followers, and 346+ stars on <a href="https://github.com/mithun50">GitHub</a>. Contributed merged PRs to projects with 46k+ combined stars including <a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">Chrome DevTools MCP</a>, <a href="https://github.com/SuperClaude-Org/SuperClaude_Framework">SuperClaude Framework</a>, and <a href="https://github.com/google/secops-wrapper">Google SecOps</a>. Published 9+ npm packages, 4+ PyPI packages, and apps on Google Play Store. Develops entirely from Android using Termux.</p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Co-Founder &mdash; <a href="https://www.instagram.com/nexgenxplorerr">NextGenXplorrers (NextGenX)</a></span>
+        <span class="entry-date">2024 &ndash; Present</span>
+      </div>
+      <ul class="entry-bullets">
+        <li>Leading a tech exploration community with presence on <a href="https://youtube.com/@nexgenxplorer">YouTube</a>, <a href="https://www.instagram.com/nexgenxplorerr">Instagram</a>, and <a href="https://play.google.com/store/apps/dev?id=8262374975871504599">Google Play Store</a></li>
+        <li>Building and publishing mobile apps (Flutter, React Native) &mdash; Reshme Info, PocketAi, Nxg-Assistant, Kannada Keyboard</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Core Contributor &mdash; <a href="https://github.com/SuperClaude-Org">SuperClaude Organization</a></span>
+        <span class="entry-date">2024 &ndash; Present</span>
+      </div>
+      <ul class="entry-bullets">
+        <li>20+ merged PRs to <a href="https://github.com/SuperClaude-Org/SuperClaude_Framework">SuperClaude Framework</a> (20.8k stars) &mdash; PyPI publishing, installer fixes, CLI enhancements, MCP installer</li>
+        <li>Maintaining scoped npm packages: <a href="https://www.npmjs.com/package/@superclaude-org/superclaude">@superclaude-org/superclaude</a>, <a href="https://www.npmjs.com/package/@superclaude-org/supergemini">@superclaude-org/supergemini</a></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Developer &mdash; <a href="https://github.com/AOSSIE-Org/Devr.AI">AOSSIE Devr.AI</a></span>
+        <span class="entry-date">2024 &ndash; Present</span>
+      </div>
+      <ul class="entry-bullets">
+        <li>Building an AI-powered Developer Relations assistant (73+ stars, 141 forks) with LLMs, RAG pipelines, and community automation</li>
+        <li>Merged PRs: <a href="https://github.com/AOSSIE-Org/Devr.AI/pull/129">frontend routing refactor</a>, <a href="https://github.com/AOSSIE-Org/Devr.AI/pull/122">dependency conflict resolution</a></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Contributor &mdash; <a href="https://github.com/google/secops-wrapper">Google SecOps Wrapper</a></span>
+        <span class="entry-date">2024 &ndash; Present</span>
+      </div>
+      <div class="entry-desc">Contributing to Google's official Python SDK for Security Operations (Chronicle) API (64+ stars). <a href="https://github.com/google/secops-wrapper/pull/71">Merged PR #71</a>: pyproject.toml layout &amp; README improvements.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Contributor &mdash; <a href="https://github.com/chandansgowda/engineering-in-kannada">Engineering in Kannada</a></span>
+        <span class="entry-date">2024 &ndash; Present</span>
+      </div>
+      <div class="entry-desc">Next.js platform for engineering education in Kannada. Merged PRs: <a href="https://github.com/chandansgowda/engineering-in-kannada/pull/40">navigation fix</a>, <a href="https://github.com/chandansgowda/engineering-in-kannada/pull/69">Google Translate integration</a>, Gemini chatbot, multilingual support.</div>
+    </div>
+  </div>
+
+  <!-- OPEN SOURCE CONTRIBUTIONS TO MAJOR PROJECTS -->
+  <div class="section">
+    <div class="section-title">Contributions to Major Projects</div>
+    <ul class="contrib-grid">
+      <li><strong><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">ChromeDevTools/chrome-devtools-mcp</a></strong> <span class="contrib-stars">(25.8k stars)</span> &mdash; 2 merged PRs: <a href="https://github.com/ChromeDevTools/chrome-devtools-mcp/pull/321">#321</a> improved error messages, <a href="https://github.com/ChromeDevTools/chrome-devtools-mcp/pull/252">#252</a> refactored Mutex onRelease</li>
+      <li><strong><a href="https://github.com/SuperClaude-Org/SuperClaude_Framework">SuperClaude-Org/SuperClaude_Framework</a></strong> <span class="contrib-stars">(20.8k stars)</span> &mdash; 20+ merged PRs: PyPI setup, installer robustness, CLI logging, legacy fallback, MCP fixes</li>
+      <li><strong><a href="https://github.com/anuraghazra/github-readme-stats">anuraghazra/github-readme-stats</a></strong> <span class="contrib-stars">(71k+ stars)</span> &mdash; <a href="https://github.com/anuraghazra/github-readme-stats/pull/4511">PR #4511</a>: fix to prevent TypeError crashes on network errors</li>
+      <li><strong><a href="https://github.com/google/secops-wrapper">google/secops-wrapper</a></strong> <span class="contrib-stars">(64 stars)</span> &mdash; <a href="https://github.com/google/secops-wrapper/pull/71">Merged PR #71</a>: pyproject.toml layout and README improvements</li>
+      <li><strong><a href="https://github.com/AOSSIE-Org/Devr.AI">AOSSIE-Org/Devr.AI</a></strong> <span class="contrib-stars">(73 stars)</span> &mdash; Merged PRs: React Router refactor, poetry.lock regeneration, dependency fixes</li>
+      <li><strong><a href="https://github.com/SumeLabs/FastApps">SumeLabs/FastApps</a></strong> &mdash; 5 merged PRs: GitHub workflows, version bumps, configuration fixes</li>
+    </ul>
+  </div>
+
+  <!-- KEY PROJECTS -->
+  <div class="section">
+    <div class="section-title">Key Projects</div>
+    <ul class="project-grid">
+      <li><strong><a href="https://github.com/mithun50/openclaw-termux">OpenClaw Termux</a></strong> <span class="project-stars">(60 stars, 10 forks)</span> &mdash; Flutter app + npm CLI to run OpenClaw AI Gateway on Android. One-tap Ubuntu/Node.js setup, embedded terminal, WebView dashboard, 7 device capabilities. No root required.</li>
+      <li><strong><a href="https://github.com/SuperClaude-Org/SuperGemini_Framework">SuperGemini Framework</a></strong> <span class="project-stars">(231 stars)</span> &mdash; Meta-programming framework for Gemini CLI with 18 slash commands, 13 AI agents with Persona Mode, and MCP integration.</li>
+      <li><strong><a href="https://github.com/mithun50/SuperGravity">SuperGravity</a></strong> <span class="project-stars">(20 stars)</span> &mdash; Python framework for Google Antigravity IDE: 9 global workflows, 12 AI skills, 10 MCP servers. Published on <a href="https://pypi.org/project/supergravity/">PyPI</a>.</li>
+      <li><strong><a href="https://github.com/mithun50/KannadaGPT-0.6B">KannadaGPT-0.6B</a></strong> &mdash; Custom 0.6B-parameter LLM fine-tuned for Kannada using LoRA on Qwen3-0.6B base. Trained on 389k samples from Cognitive-Lab/Kannada-Instruct-dataset.</li>
+      <li><strong><a href="https://github.com/mithun50/groq-rag">groq-rag</a></strong> <span class="project-stars">(<a href="https://www.npmjs.com/package/groq-rag">npm</a>)</span> &mdash; Extended Groq SDK with RAG, web browsing, vector store, and ReAct-style AI agents. <a href="https://groq-rag.onrender.com">Live demo</a>.</li>
+      <li><strong><a href="https://github.com/mithun50/CortexFlow">CortexFlow</a></strong> <span class="project-stars">(<a href="https://www.npmjs.com/package/cortexflow">npm</a>)</span> &mdash; Universal MCP server for AI-to-AI task continuation. Dual transport, 14+ client configs, 56% token savings, 95.4K ops/sec.</li>
+      <li><strong><a href="https://github.com/mithun50/Kannadafy">Kannadafy</a></strong> <span class="project-stars">(9 stars, <a href="https://pypi.org/project/Kannadafy/">PyPI</a>)</span> &mdash; Python code obfuscator supporting 5 scripts: Kannada, Telugu, Tamil, Devanagari, Greek. Multi-file batch processing.</li>
+      <li><strong><a href="https://github.com/mithun50/pyKannada">pyKannada</a></strong> <span class="project-stars">(<a href="https://pypi.org/project/pyKannada/">PyPI</a>)</span> &mdash; Python interpreter using Kannada keywords (40+ mappings). Interactive REPL and script execution.</li>
+    </ul>
+  </div>
+
+  <!-- PUBLISHED PACKAGES -->
+  <div class="section">
+    <div class="section-title">Published Packages</div>
+    <ul class="packages-grid">
+      <li><span class="pkg-label">npm</span> (9+ packages): <a href="https://www.npmjs.com/package/@superclaude-org/superclaude">@superclaude-org/superclaude</a>, <a href="https://www.npmjs.com/package/@superclaude-org/supergemini">@superclaude-org/supergemini</a>, <a href="https://www.npmjs.com/package/openclaw-termux">openclaw-termux</a>, <a href="https://www.npmjs.com/package/cortexflow">cortexflow</a>, <a href="https://www.npmjs.com/package/groq-rag">groq-rag</a>, <a href="https://www.npmjs.com/package/github-contributors-badge">github-contributors-badge</a>, luma-cli, and more</li>
+      <li><span class="pkg-label">PyPI</span> (4+ packages): <a href="https://pypi.org/project/supergravity/">supergravity</a>, <a href="https://pypi.org/project/Kannadafy/">kannadafy</a>, <a href="https://pypi.org/project/pyKannada/">pyKannada</a>, <a href="https://pypi.org/project/SuperQwen/">superqwen</a></li>
+    </ul>
+  </div>
+
+  <!-- TECHNICAL SKILLS -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <span class="skill-label">Languages</span>
+      <span class="skill-value">Python, TypeScript, JavaScript, Dart, Java, Kotlin, C++, Bash, HTML/CSS</span>
+
+      <span class="skill-label">Frameworks</span>
+      <span class="skill-value">React, Next.js, Flask, FastAPI, Flutter, React Native, Express.js, Node.js, TailwindCSS</span>
+
+      <span class="skill-label">AI / ML</span>
+      <span class="skill-value">TensorFlow, HuggingFace, Groq, MCP (Model Context Protocol), LLM Fine-tuning (LoRA), RAG, Google Colab</span>
+
+      <span class="skill-label">Security</span>
+      <span class="skill-value">Kali Linux, Burp Suite, Wireshark, Nmap, Metasploit, OWASP, Pentesting, CTF</span>
+
+      <span class="skill-label">DevOps / Cloud</span>
+      <span class="skill-value">Docker, Firebase, Git, Linux, Vercel, Netlify, Google Cloud, GitHub Actions, Render</span>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="entry">
+      <div class="edu-header">
+        <span class="edu-title"><a href="https://dbit.co.in/">Don Bosco Institute of Technology (DBIT)</a>, Bengaluru</span>
+        <span class="edu-date">Sep 2025 &ndash; Sep 2029</span>
+      </div>
+      <div class="edu-detail">Bachelor of Engineering (BE) &mdash; Computer Science</div>
+    </div>
+
+    <div class="entry">
+      <div class="edu-header">
+        <span class="edu-title">Universal PU College</span>
+        <span class="edu-date">May 2023 &ndash; Mar 2025</span>
+      </div>
+      <div class="edu-detail">Pre-University (PUC) &mdash; Science (PCMB)</div>
+    </div>
+
+    <div class="entry">
+      <div class="edu-header">
+        <span class="edu-title">Shree Vinayaka Rural High School</span>
+        <span class="edu-date">Jun 2020 &ndash; Apr 2023</span>
+      </div>
+      <div class="edu-detail">High School</div>
+    </div>
+
+    <div class="entry">
+      <div class="edu-header">
+        <span class="edu-title">Strawberry International School, Ramanagara (CBSE)</span>
+        <span class="edu-date">Apr 2017 &ndash; Mar 2020</span>
+      </div>
+      <div class="edu-detail">Primary School</div>
+    </div>
+
+    <div class="entry">
+      <div class="edu-header">
+        <span class="edu-title">Shree T Giriyappa Memorial Educational Trust</span>
+        <span class="edu-date">May 2012 &ndash; Apr 2017</span>
+      </div>
+      <div class="edu-detail">Primary</div>
+    </div>
+
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    <ul class="project-grid">
+      <li><strong><a href="https://verify.skilljar.com/c/oiz6n6brfa8c">Introduction to Model Context Protocol</a></strong> &mdash; <a href="https://anthropic.skilljar.com/">Anthropic Academy</a> &middot; Building MCP servers &amp; clients in Python, mastering tools, resources, and prompts primitives</li>
+      <li><strong><a href="https://unstop.com/certificate-preview/5bfaf41a-e5ee-42b7-898c-8527a5c036a0">Unstop Certificate</a></strong> &mdash; <a href="https://unstop.com">Unstop</a></li>
+    </ul>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="section">
+    <div class="section-title">Achievements &amp; Recognition</div>
+    <div class="achievements-list">
+      <span class="item">500+ open-source contributions on <a href="https://github.com/mithun50">GitHub</a></span>
+      <span class="item"><a href="https://github.com/mithun50">GitHub</a> Developer Program Member</span>
+      <span class="item">Merged PRs to repos with 46k+ combined stars</span>
+      <span class="item">Published apps on <a href="https://play.google.com/store/apps/dev?id=8262374975871504599">Google Play Store</a></span>
+      <span class="item">77 public repos, 98 followers, 346+ stars</span>
+      <span class="item">GitHub Public Sponsor</span>
+      <span class="item">9+ npm packages, 4+ PyPI packages published</span>
+      <span class="item">Starstruck (x2), Pull Shark (x2), Pair Extraordinaire (x2)</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

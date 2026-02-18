@@ -2,18 +2,19 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Home, User, FolderGit2, Mail, Briefcase } from "lucide-react";
+import { Menu, X, Github, Home, User, FolderGit2, Mail, Briefcase, FileText } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { profile } from "@/data/profile";
 
 const navItems = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "About", href: "/about", icon: User },
-  { name: "Projects", href: "/projects", icon: FolderGit2 },
-  { name: "Experience", href: "/experience", icon: Briefcase },
-  { name: "Contact", href: "/contact", icon: Mail },
+  { name: "Home", href: "/", icon: Home, external: false },
+  { name: "About", href: "/about", icon: User, external: false },
+  { name: "Projects", href: "/projects", icon: FolderGit2, external: false },
+  { name: "Experience", href: "/experience", icon: Briefcase, external: false },
+  { name: "Contact", href: "/contact", icon: Mail, external: false },
+  { name: "Resume", href: "/resume.html", icon: FileText, external: true },
 ];
 
 export default function Navbar() {
@@ -59,8 +60,16 @@ export default function Navbar() {
               const isActive = pathname === item.href ||
                 (item.href !== "/" && pathname.startsWith(item.href));
 
+              const LinkWrapper = item.external
+                ? ({ children }: { children: React.ReactNode }) => (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer">{children}</a>
+                  )
+                : ({ children }: { children: React.ReactNode }) => (
+                    <Link href={item.href}>{children}</Link>
+                  );
+
               return (
-                <Link key={item.name} href={item.href}>
+                <LinkWrapper key={item.name}>
                   <motion.div
                     className={cn(
                       "px-4 py-2 rounded-full text-sm font-mono transition-all duration-300 relative",
@@ -80,7 +89,7 @@ export default function Navbar() {
                       />
                     )}
                   </motion.div>
-                </Link>
+                </LinkWrapper>
               );
             })}
           </div>
@@ -122,6 +131,11 @@ export default function Navbar() {
               {navItems.map((item, index) => {
                 const isActive = pathname === item.href;
                 const Icon = item.icon;
+                const linkProps = item.external
+                  ? { href: item.href, target: "_blank" as const, rel: "noopener noreferrer" }
+                  : { href: item.href };
+
+                const MobileLink = item.external ? "a" : Link;
 
                 return (
                   <motion.div
@@ -130,8 +144,8 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                   >
-                    <Link
-                      href={item.href}
+                    <MobileLink
+                      {...linkProps}
                       className={cn(
                         "flex items-center gap-3 py-3 px-4 rounded-xl transition-all font-mono text-sm",
                         isActive
@@ -142,7 +156,7 @@ export default function Navbar() {
                     >
                       <Icon className="w-4 h-4" />
                       <span>{item.name}</span>
-                    </Link>
+                    </MobileLink>
                   </motion.div>
                 );
               })}
