@@ -23,5 +23,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A .
-          git commit -m "Update profile image Co-Authored-By: Mithun Gowda B <mithungowda.b7411@gmail.com>"
+          git commit -m "Update profile image \n\nCo-Authored-By: Mithun Gowda B <mithungowda.b7411@gmail.com>"
           git push -f
