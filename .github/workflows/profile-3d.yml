@@ -44,7 +44,7 @@ jobs:
 
       - name: Commit & Push 3D Graph
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "mithun50"
+          git config user.email "mithungowda.b7411@gmail.com"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update profile animations \n\nCo-Authored-By: Mithun Gowda B <mithungowda.b7411@gmail.com>" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update profile animations Co-Authored-By: Mithun Gowda B <mithungowda.b7411@gmail.com>" && git push)
