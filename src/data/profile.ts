@@ -1,7 +1,7 @@
 export const profile = {
   name: "Mithun Gowda B",
   tagline: "Full-Stack Developer | AI Enthusiast | Cybersecurity",
-  bio: "Engineering student at Don Bosco Institute of Technology, passionate about building innovative solutions through code. Co-Founder of NextGenXplorrers (NextGenX) and active open-source contributor with expertise in AI frameworks, mobile development, and web technologies.",
+  bio: "Engineering student at Don Bosco Institute of Technology, passionate about building innovative solutions through code. Co-Founder of Quilonix and active open-source contributor with expertise in AI frameworks, mobile development, and web technologies.",
   location: "Karnataka, India",
   status: "Engineering Student @ DBIT",
   email: "mithungowda.b7411@gmail.com",
@@ -19,10 +19,10 @@ export const profile = {
 
   // Venture
   venture: {
-    name: "NextGenXplorrers",
-    shortName: "NextGenX",
+    name: "Quilonix",
+    shortName: "Quilonix",
     role: "Co-Founder",
-    description: "Tech exploration and innovation community",
+    description: "AI-focused tech startup building innovative solutions",
   },
 
   rotatingWords: ["Developer", "Innovator", "Creator", "Engineer", "Co-Founder", "Security Enthusiast"],
@@ -45,12 +45,14 @@ export const profile = {
     orcid: "https://orcid.org/0009-0000-7572-8379",
   },
 
-  // NextGenXplorrers Socials
-  nextgenx: {
-    instagram: "https://www.instagram.com/nexgenxplorerr",
-    youtube: "https://youtube.com/@nexgenxplorer",
-    playstore: "https://play.google.com/store/apps/dev?id=8262374975871504599",
-    email: "nxgextra@gmail.com",
+  // Quilonix Socials
+  quilonix: {
+    linkedin: "https://www.linkedin.com/company/quilonix/",
+    instagram: "https://www.instagram.com/quilonix.ai?igsh=YWV0ZHRuZDZ0M2V3",
+    github: "https://github.com/Quilonix",
+    youtube: "https://youtube.com/@quilonix?si=uV94VmTfJ6rhVNXi",
+    huggingface: "https://huggingface.co/Quilonix",
+    website: "https://quilonix.in",
   },
 
   achievements: [
@@ -61,7 +63,7 @@ export const profile = {
     { name: "Quickdraw", count: 1, icon: "Timer" },
   ],
 
-  organizations: ["SuperClaude-Org", "NextGenXplorer"],
+  organizations: ["SuperClaude-Org", "Quilonix"],
 };
 
 export const skills = {
@@ -404,9 +406,9 @@ export const categories = [
 export const experience = [
   {
     title: "Co-Founder",
-    company: "NextGenXplorrers (NextGenX)",
+    company: "Quilonix",
     period: "2024 - Present",
-    description: "Leading tech exploration and innovation community with presence on YouTube, Instagram, and Play Store",
+    description: "Leading AI startup building innovative solutions with presence on YouTube, Instagram, LinkedIn, GitHub, HuggingFace, and the web",
     type: "venture",
     icon: "Rocket",
   },

@@ -21,7 +21,7 @@ interface ProfileData {
     contributions: string | number;
   };
   socials: { github: string };
-  nextgenx: { youtube: string; instagram: string; playstore: string };
+  quilonix: { linkedin: string; instagram: string; github: string; youtube: string; huggingface: string; website: string };
 }
 
 // BlurText animation component

@@ -42,7 +42,7 @@ const mithun = {
   },
 
   roles: [
-    "Co-Founder @ NextGenXplorrers",
+    "Co-Founder @ Quilonix",
     "Open Source Contributor",
     "AI Framework Developer",
     "Cybersecurity Enthusiast"
@@ -219,11 +219,23 @@ const mithun = {
 
 <div align="center">
 
-<a href="https://instagram.com/nexgenxplorerr">
-<img src="https://img.shields.io/badge/NextGenXplorrers-Co--Founder-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=1a1a2e"/>
+<a href="https://quilonix.in">
+<img src="https://img.shields.io/badge/Quilonix-Co--Founder-A855F7?style=for-the-badge&logo=safari&logoColor=white&labelColor=1a1a2e"/>
 </a>
-<a href="https://youtube.com/@nexgenxplorer">
-<img src="https://img.shields.io/badge/YouTube-@nexgenxplorer-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=1a1a2e"/>
+<a href="https://www.linkedin.com/company/quilonix/">
+<img src="https://img.shields.io/badge/LinkedIn-Quilonix-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1a1a2e"/>
+</a>
+<a href="https://www.instagram.com/quilonix.ai?igsh=YWV0ZHRuZDZ0M2V3">
+<img src="https://img.shields.io/badge/Instagram-@quilonix.ai-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=1a1a2e"/>
+</a>
+<a href="https://youtube.com/@quilonix?si=uV94VmTfJ6rhVNXi">
+<img src="https://img.shields.io/badge/YouTube-@quilonix-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=1a1a2e"/>
+</a>
+<a href="https://github.com/Quilonix">
+<img src="https://img.shields.io/badge/GitHub-Quilonix-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1a1a2e"/>
+</a>
+<a href="https://huggingface.co/Quilonix">
+<img src="https://img.shields.io/badge/HuggingFace-Quilonix-FFD21F?style=for-the-badge&logo=huggingface&logoColor=black&labelColor=1a1a2e"/>
 </a>
 <a href="https://play.google.com/store/apps/dev?id=8262374975871504599">
 <img src="https://img.shields.io/badge/Play_Store-Published_Apps-3DDC84?style=for-the-badge&logo=googleplay&logoColor=white&labelColor=1a1a2e"/>
