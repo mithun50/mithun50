@@ -2,7 +2,7 @@
 
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Users, GitFork, Sparkles, Terminal, Zap, Globe, GraduationCap, Rocket, Youtube, PlayCircle, Github, Linkedin, Twitter, ExternalLink, MapPin } from "lucide-react";
+import { Code2, Users, GitFork, Sparkles, Terminal, Zap, Globe, GraduationCap, Rocket, Youtube, Github, Linkedin, Twitter, ExternalLink, MapPin } from "lucide-react";
 import { DynamicIcon } from "@/components/ui/dynamic-icon";
 import { GlassCard } from "@/components/ui/glass-card";
 import Image from "next/image";
@@ -43,11 +43,13 @@ interface ProfileData {
     orcid: string;
     huggingface: string;
   };
-  nextgenx: {
+  quilonix: {
+    linkedin: string;
     instagram: string;
+    github: string;
     youtube: string;
-    playstore: string;
-    email: string;
+    huggingface: string;
+    website: string;
   };
   achievements: { name: string; count: number; icon: string }[];
   organizations: string[];
@@ -286,7 +288,7 @@ export default function About({ profile }: { profile: ProfileData }) {
             </GlassCard>
           </motion.div>
 
-          {/* NextGenX Venture Card */}
+          {/* Quilonix Venture Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -311,7 +313,16 @@ export default function About({ profile }: { profile: ProfileData }) {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href={profile.nextgenx.youtube}
+                    href={profile.quilonix.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors text-sm"
+                  >
+                    <Globe className="w-4 h-4" />
+                    <span>Website</span>
+                  </a>
+                  <a
+                    href={profile.quilonix.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors text-sm"
@@ -320,7 +331,7 @@ export default function About({ profile }: { profile: ProfileData }) {
                     <span>YouTube</span>
                   </a>
                   <a
-                    href={profile.nextgenx.instagram}
+                    href={profile.quilonix.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors text-sm"
@@ -331,13 +342,31 @@ export default function About({ profile }: { profile: ProfileData }) {
                     <span>Instagram</span>
                   </a>
                   <a
-                    href={profile.nextgenx.playstore}
+                    href={profile.quilonix.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors text-sm"
                   >
-                    <PlayCircle className="w-4 h-4" />
-                    <span>Play Store</span>
+                    <Linkedin className="w-4 h-4" />
+                    <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href={profile.quilonix.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors text-sm"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href={profile.quilonix.huggingface}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition-colors text-sm"
+                  >
+                    <Sparkles className="w-4 h-4" />
+                    <span>HuggingFace</span>
                   </a>
                 </div>
               </div>

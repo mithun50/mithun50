@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Mithun Gowda B | Full-Stack Developer & AI Enthusiast",
   description:
-    "Portfolio of Mithun Gowda B - Engineering student at DBIT, Co-Founder of NextGenXplorrers, full-stack developer, and open-source contributor specializing in AI frameworks, mobile apps, and web development.",
+    "Portfolio of Mithun Gowda B - Engineering student at DBIT, Co-Founder of Quilonix, full-stack developer, and open-source contributor specializing in AI frameworks, mobile apps, and web development.",
   keywords: [
     "Mithun Gowda B",
     "Full-Stack Developer",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "Python",
     "Flutter",
     "SuperClaude",
-    "NextGenXplorrers",
+    "Quilonix",
     "DBIT",
     "Don Bosco Institute of Technology",
   ],
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: "https://mithun50.github.io",
     title: "Mithun Gowda B | Full-Stack Developer & AI Enthusiast",
     description:
-      "Portfolio of Mithun Gowda B - Engineering student at DBIT, Co-Founder of NextGenXplorrers",
+      "Portfolio of Mithun Gowda B - Engineering student at DBIT, Co-Founder of Quilonix",
     siteName: "Mithun Gowda B Portfolio",
     images: [
       {
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Mithun Gowda B | Full-Stack Developer & AI Enthusiast",
     description:
-      "Portfolio of Mithun Gowda B - Engineering student at DBIT, Co-Founder of NextGenXplorrers",
+      "Portfolio of Mithun Gowda B - Engineering student at DBIT, Co-Founder of Quilonix",
     images: ["https://github.com/mithun50.png"],
     creator: "@MithunGowdaB",
   },

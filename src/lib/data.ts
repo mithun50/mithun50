@@ -4,7 +4,7 @@ import { fetchGitHubUser, fetchGitHubRepos, fetchGitHubStats, GitHubRepo } from 
 export const staticProfile = {
   name: "Mithun Gowda B",
   tagline: "Full-Stack Developer | AI Enthusiast | Cybersecurity",
-  bio: "Engineering student at Don Bosco Institute of Technology, passionate about building innovative solutions through code. Co-Founder of NextGenXplorrers (NextGenX) and active open-source contributor with expertise in AI frameworks, mobile development, and web technologies.",
+  bio: "Engineering student at Don Bosco Institute of Technology, passionate about building innovative solutions through code. Co-Founder of Quilonix and active open-source contributor with expertise in AI frameworks, mobile development, and web technologies.",
   email: "mithungowda.b7411@gmail.com",
   location: "Akkur, Akkur Post, Ramanagara Taluk & District, Karnataka, India",
   resumeUrl: "#",
@@ -18,10 +18,10 @@ export const staticProfile = {
   },
 
   venture: {
-    name: "NextGenXplorrers",
-    shortName: "NextGenX",
+    name: "Quilonix",
+    shortName: "Quilonix",
     role: "Co-Founder",
-    description: "Tech exploration and innovation community",
+    description: "AI-focused tech startup building innovative solutions",
   },
 
   rotatingWords: ["Developer", "Innovator", "Creator", "Engineer", "Co-Founder", "Security Enthusiast"],
@@ -38,11 +38,13 @@ export const staticProfile = {
     huggingface: "https://huggingface.co/Mithun501",
   },
 
-  nextgenx: {
-    instagram: "https://www.instagram.com/nexgenxplorerr",
-    youtube: "https://youtube.com/@nexgenxplorer",
-    playstore: "https://play.google.com/store/apps/dev?id=8262374975871504599",
-    email: "nxgextra@gmail.com",
+  quilonix: {
+    linkedin: "https://www.linkedin.com/company/quilonix/",
+    instagram: "https://www.instagram.com/quilonix.ai?igsh=YWV0ZHRuZDZ0M2V3",
+    github: "https://github.com/Quilonix",
+    youtube: "https://youtube.com/@quilonix?si=uV94VmTfJ6rhVNXi",
+    huggingface: "https://huggingface.co/Quilonix",
+    website: "https://quilonix.in",
   },
 
   achievements: [
@@ -53,7 +55,7 @@ export const staticProfile = {
     { name: "Quickdraw", count: 1, icon: "Timer" },
   ],
 
-  organizations: ["SuperClaude-Org", "NextGenXplorer"],
+  organizations: ["SuperClaude-Org", "Quilonix"],
 };
 
 // Fetch dynamic profile data from GitHub
@@ -307,9 +309,9 @@ export function getCategories(projects: Awaited<ReturnType<typeof getDynamicProj
 export const experience = [
   {
     title: "Co-Founder",
-    company: "NextGenXplorrers (NextGenX)",
+    company: "Quilonix",
     period: "2024 - Present",
-    description: "Leading tech exploration and innovation community with presence on YouTube, Instagram, and Play Store",
+    description: "Leading AI startup building innovative solutions with presence on YouTube, Instagram, LinkedIn, GitHub, HuggingFace, and the web",
     type: "venture",
     icon: "Rocket",
   },
