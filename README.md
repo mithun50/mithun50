@@ -22,6 +22,13 @@
   </picture>
 </div>
 
+<br/>
+
+<!-- ASCII self-portrait, types itself in like a terminal -->
+<div align="center">
+  <img src="./ascii-portrait.svg" width="440" alt="ASCII portrait of Mithun Gowda B" />
+</div>
+
 ---
 
 <table>
