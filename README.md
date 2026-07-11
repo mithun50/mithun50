@@ -1,3 +1,8 @@
+<!-- ASCII self-portrait, types itself in like a terminal -->
+<div align="center">
+  <img src="./ascii-portrait.svg" width="440" alt="ASCII portrait of Mithun Gowda B" />
+</div>
+
 <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,14,25,27&height=200&section=header&text=Mithun%20Gowda%20B&fontSize=60&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20AI%20Enthusiast%20%7C%20Cybersecurity&descSize=18&descAlignY=55"/>
 
 <div align="center">
@@ -20,13 +25,6 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mithun50/mithun50/output/github-snake.svg" />
     <img alt="github-snake" src="https://raw.githubusercontent.com/mithun50/mithun50/output/github-snake-dark.svg" />
   </picture>
-</div>
-
-<br/>
-
-<!-- ASCII self-portrait, types itself in like a terminal -->
-<div align="center">
-  <img src="./ascii-portrait.svg" width="440" alt="ASCII portrait of Mithun Gowda B" />
 </div>
 
 ---
