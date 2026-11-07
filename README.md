@@ -7,21 +7,40 @@
 
 Engineering student at DBIT, Karnataka, India. I build and ship from Termux on Android.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-mithungowda.in-A855F7?style=flat-square)](https://mithungowda.in)
-[![Resume](https://img.shields.io/badge/Resume-View-1a6dd4?style=flat-square)](https://mithungowda.in/resume.html)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mithungowdab-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/mithungowdab)
-[![X](https://img.shields.io/badge/X-@mithungowdab-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/mithungowdab)
+[![Portfolio](https://img.shields.io/badge/Portfolio-mithungowda.in-A855F7?style=flat)](https://mithungowda.in)
+[![Resume](https://img.shields.io/badge/Resume-View-1a6dd4?style=flat)](https://mithungowda.in/resume.html)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mithungowdab-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/mithungowdab)
+[![X](https://img.shields.io/badge/X-@mithungowdab-000000?style=flat&logo=x&logoColor=white)](https://x.com/mithungowdab)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EA4AAA?style=flat&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/mithun50)
 
 </div>
 
 ## Skills
 
-| | |
-|---|---|
-| **Languages** | Python, Dart, Java |
-| **Frameworks** | FastAPI, Flutter |
-| **Cloud & DevOps** | AWS, GCP, Docker, Vercel, GitHub |
-| **Systems** | Ubuntu, Kali Linux, Termux |
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+
+**Frameworks**
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
+
+**Cloud & DevOps**
+
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
+![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat&logo=googlecloud&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+
+**Systems**
+
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white)
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat&logo=kalilinux&logoColor=white)
+![Termux](https://img.shields.io/badge/Termux-000000?style=flat&logo=android&logoColor=3DDC84)
 
 ## Work
 
