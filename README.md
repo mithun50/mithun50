@@ -44,9 +44,9 @@ Engineering student at DBIT, Karnataka, India. I build and ship from Termux on A
 
 ## Work
 
-- **[Quilonix](https://quilonix.in)** — Co-Founder. AI products and mobile apps · [GitHub](https://github.com/Quilonix) · [Hugging Face](https://huggingface.co/Quilonix) · [Play Store](https://play.google.com/store/apps/dev?id=8262374975871504599)
-- **Open source** — merged PRs to [SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework), [Google SecOps Wrapper](https://github.com/google/secops-wrapper), [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) and [Devr.AI](https://github.com/AOSSIE-Org/Devr.AI)
-- **Packages** — on [PyPI](https://pypi.org/user/mithungowda.b) and [npm](https://npmjs.com/~mithun50)
+- **[Quilonix](https://quilonix.in)** - Co-Founder. AI products and mobile apps · [GitHub](https://github.com/Quilonix) · [Hugging Face](https://huggingface.co/Quilonix) · [Play Store](https://play.google.com/store/apps/dev?id=8262374975871504599)
+- **Open source** - merged PRs to [SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework), [Google SecOps Wrapper](https://github.com/google/secops-wrapper), [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) and [Devr.AI](https://github.com/AOSSIE-Org/Devr.AI)
+- **Packages** - on [PyPI](https://pypi.org/user/mithungowda.b) and [npm](https://npmjs.com/~mithun50)
 
 ## Contact
 
